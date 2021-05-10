@@ -1,0 +1,36 @@
+#skill-window{
+    width: 25vw;
+    height: 50vh;
+    margin: auto;
+    background-color: #c5c3c3;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display:none;
+    padding: 25px;
+}
+
+#skill-window-title{
+    text-align: center;
+    font-size: 3vw;
+}
+
+#skillset-1{
+    float: left;
+}
+
+#skillset-2{
+    float: right;
+}
+
+#skill-window-close{
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+}
+
+body{
+    background:linear-gradient(90deg,#5dfe60, #28d1ab);
+}
