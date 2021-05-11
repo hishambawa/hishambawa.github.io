@@ -34,6 +34,7 @@
 body{
     background:linear-gradient(90deg,#5dfe60, #28d1ab);
     margin: 0;
+    padding: 10px;
 }
 
 img{
@@ -45,32 +46,36 @@ img:hover, img:active{
     cursor: pointer;
 }
 
-#money{
+.money{
     width: 10%;
     position: absolute;
     top: 0;
     right: 0;
 }
 
-#money p, #money span{
-    font-size: 30px;
-    font-family: monospace;
+.energy{
+    width: 20vw;
+    position: relative;
+    margin: 0 auto !important;
+}
+
+.day{
+    position: absolute;
+    top: 0;
+    width: 20vw;
     margin: 0;
 }
 
-#energy{
-    width: 20vw;
-    position: relative;
-    margin: 0 auto;
-}
-
-#energy p, #energy span{
+.ui-text{
     font-size: 25px;
     font-family: monospace;
     margin: 0;
 }
 
 #map{
-    width: 100vw;
-    height: 100vh;
+    width: calc(90vw - 20px);
+    height: calc(60vh - 20px);
+    position: absolute;
+    top: 0;
+    padding: 20vh 5vw;
 }

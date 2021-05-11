@@ -1,4 +1,4 @@
-let player;
+let player, day;
 
 class Player
 {
@@ -22,6 +22,7 @@ function newGame()
     }
 
     player = new Player("Test", skills, 100, 100);
+    setDay(1);
 }
 
 function saveGame()
@@ -30,6 +31,7 @@ function saveGame()
     sessionStorage.setItem("skills", JSON.stringify(player.skills));
     sessionStorage.setItem("money", player.money);
     sessionStorage.setItem("energy", player.energy);
+    sessionStorage.setItem("day", day);
 
     alert("Saved the game successfully");
 }
@@ -42,6 +44,8 @@ function loadGame()
     player = new Player(sessionStorage.getItem("name"), JSON.parse(sessionStorage.getItem("skills")), money, energy);
     setEnergy(energy);
     setMoney(money);
+    setDay(sessionStorage.getItem("day"));
+    
     alert("Loaded!");
 }
 

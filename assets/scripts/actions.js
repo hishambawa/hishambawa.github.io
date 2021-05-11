@@ -15,4 +15,5 @@ function train()
 function sleep()
 {
     setEnergy(100);
+    setDay(getDay() + 1);
 }
