@@ -2,10 +2,12 @@ let player;
 
 class Player
 {
-    constructor(name,skills)
+    constructor(name,skills, money, energy)
     {
         this.name = name;
         this.skills = skills;
+        this.money = money;
+        this.energy = energy
     }
 }
 
@@ -19,21 +21,27 @@ function newGame()
         intelligence:0
     }
 
-    player = new Player("Test", skills);
+    player = new Player("Test", skills, 100, 100);
 }
 
 function saveGame()
 {
     sessionStorage.setItem("name",player.name);
     sessionStorage.setItem("skills", JSON.stringify(player.skills));
+    sessionStorage.setItem("money", player.money);
+    sessionStorage.setItem("energy", player.energy);
 
     alert("Saved the game successfully");
 }
 
 function loadGame()
 {
-    player = new Player(sessionStorage.getItem("name"), JSON.parse(sessionStorage.getItem("skills")));
-    
+    let energy = sessionStorage.getItem("energy");
+    let money = sessionStorage.getItem("money");
+
+    player = new Player(sessionStorage.getItem("name"), JSON.parse(sessionStorage.getItem("skills")), money, energy);
+    setEnergy(energy);
+    setMoney(money);
     alert("Loaded!");
 }
 

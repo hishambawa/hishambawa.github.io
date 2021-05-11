@@ -33,4 +33,44 @@
 
 body{
     background:linear-gradient(90deg,#5dfe60, #28d1ab);
+    margin: 0;
+}
+
+img{
+    width: 300px;
+}
+
+img:hover, img:active{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#money{
+    width: 10%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#money p, #money span{
+    font-size: 30px;
+    font-family: monospace;
+    margin: 0;
+}
+
+#energy{
+    width: 20vw;
+    position: relative;
+    margin: 0 auto;
+}
+
+#energy p, #energy span{
+    font-size: 25px;
+    font-family: monospace;
+    margin: 0;
+}
+
+#map{
+    width: 100vw;
+    height: 100vh;
 }
