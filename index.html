@@ -6,36 +6,43 @@
 
         <link href="assets/styles/styles.css" rel="stylesheet">
 
-        <script src="assets/scripts/script.js"></script>
-        <script src="assets/scripts/getters_setters.js"></script>
-        <script src="assets/scripts/actions.js"></script>
+        <script src="assets/scripts/getters_setters.js" defer></script>
+        <script src="assets/scripts/script.js" defer></script>
+        <script src="assets/scripts/actions.js" defer></script>
         <script src="assets/scripts/events.js" defer></script>
     </head>
 
     <body>
 
-        <div class="ui-text money">
-            <p>$<span id="money">100</span></p>
-        </div>
+        <div id="game">
 
-        <div class="ui-text energy">
-            <p>Energy: <span id="energy">100</span></p>
-        </div>
-
-        <div class="ui-text day">
-            <p>Day: <span id="day">1</span></p>
-        </div>
-
-        <div id="map">
-
-            <img src="assets/images/gym.svg" onclick="train()" id="gym">
-            <img src="assets/images/apartment.svg" onclick="sleep()" id="apartment">
+            <div class="ui-text money">
+                <p>$<span id="money">100</span></p>
+            </div>
+    
+            <div class="ui-text energy">
+                <p>Energy: <span id="energy">100</span></p>
+            </div>
+    
+            <div class="ui-text day">
+                <p>Day: <span id="day">1</span></p>
+            </div>
+    
+            <div id="map">
+    
+                <img src="assets/images/gym.svg" onclick="train()" id="gym">
+                <img src="assets/images/apartment.svg" onclick="sleep()" id="apartment">
+    
+            </div>
 
             <!-- #region Debug Tools -->
         
-            <p onclick="skillWindow()">Skill Window</p>
+            <div id="dev-tools">
+                <p onclick="skillWindow()">Skill Window</p>
+            </div>
 
             <!-- #endregion -->
+
         </div>
 
         <div id="skill-window">
