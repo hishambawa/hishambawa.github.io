@@ -6,3 +6,8 @@ body{
     background-image: linear-gradient(0deg, #fcda53, #f9c13a);
     font-family: 'Raleway', sans-serif;
 }
+
+a, a:hover, a:visited, a:active{
+    all:unset; 
+    color: inherit;
+}
