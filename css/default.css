@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@900&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(0deg, #fcda53, #f9c13a);
+    font-family: 'Raleway', sans-serif;
+}

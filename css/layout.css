@@ -1,0 +1,40 @@
+#container{
+    width: 100%;
+    min-height: 100vh;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(calc(100vh/8), 80px) max-content minmax(calc(100vh/8), 80px) max-content 4fr minmax(calc(100vh/8), 80px);
+    grid-template-areas: "header"
+                         "navbar"
+                         "sidebar"
+                         "filter"
+                         "content"
+                         "footer";
+}
+
+#header{
+    grid-area: header;
+
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "logo cart menu";
+
+    align-items: center;
+    justify-items: center;
+}
+
+#sidebar{
+    grid-area: sidebar;
+
+    background-color: white;
+}
+
+#content{
+    grid-area: content;
+}
+
+#footer{
+    grid-area: footer;
+    background-color: black;
+}

@@ -1,0 +1,89 @@
+/* #region Navbar Mobile */
+
+#navigation{
+    display: none;
+    grid-area: navbar;
+    padding: 0;
+    margin: 0;
+    background-color: #696969;
+}
+
+#navigation li{
+    font-size: 1.17em;
+    font-family: 'Raleway';
+    padding: 1em 20px;
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+}
+
+#navigation li:hover{
+    background-color: black;
+}
+
+/* #endregion */
+
+/* #region Header */
+
+#logo{
+    justify-self: left;
+    margin-left: 20px;
+}
+
+#menu{
+    grid-area: menu;
+}
+
+#cart{
+    grid-area: cart;
+}
+
+#menu:active, #cart:active{
+    transform: scale(1.1);
+}
+
+#header img{
+    width: 40px;
+}
+
+/* #endregion */
+
+/* #region Filter*/
+
+#filter-btn{
+    float: right;
+    margin: 30px;
+    font-size: 1.5em;
+    border-radius: 50px;
+}
+
+#filter{
+    grid-area: filter;
+    background-color: white;
+    display: none;
+}
+
+#filter ul{
+    padding: 0;
+    margin: 0;
+}
+
+#filter li{
+    font-size: 1.17em;
+    font-family: 'Raleway';
+    padding: 1em 20px;
+    text-decoration: none;
+    list-style-type: none;
+    text-align: center;
+}
+
+#filter ul li:not(#price):hover{
+    background-color: black;
+    color: white;
+}
+
+#price-filter li{
+    font-size: 1em;
+}
+
+/* #endregion */

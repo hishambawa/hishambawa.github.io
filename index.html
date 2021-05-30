@@ -1,66 +1,77 @@
+<!-- This is the new layout version 2 (Mobile First) -->
+
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title>VSims v1.0</title>
+        <title>Shop</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link href="assets/styles/styles.css" rel="stylesheet">
+        <link href="css/default.css" rel="stylesheet">
+        <link href="css/layout.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/media.css" rel="stylesheet">
 
-        <script src="assets/scripts/getters_setters.js" defer></script>
-        <script src="assets/scripts/script.js" defer></script>
-        <script src="assets/scripts/actions.js" defer></script>
-        <script src="assets/scripts/events.js" defer></script>
+        <script src="javascript/product.js"></script>
+        <script src="javascript/script.js"></script>
     </head>
-
     <body>
+        <div class="container" id="container">
 
-        <div id="game">
+            <div id="header">
 
-            <div class="ui-text money">
-                <p>$<span id="money">100</span></p>
-            </div>
-    
-            <div class="ui-text energy">
-                <p>Energy: <span id="energy">100</span></p>
-            </div>
-    
-            <div class="ui-text day">
-                <p>Day: <span id="day">1</span></p>
-            </div>
-    
-            <div id="map">
-    
-                <img src="assets/images/gym.svg" onclick="train()" id="gym">
-                <img src="assets/images/apartment.svg" onclick="sleep()" id="apartment">
-    
+                <h1 id="logo">LOGO</h1>
+                
+                <div id="menu" onclick="menu()">
+                    <img src="icons/menu.svg">
+                </div>
+
+                <div id="cart">
+                    <img src="icons/bag.svg">
+                </div>
+
             </div>
 
-            <!-- #region Debug Tools -->
+            <ul id="navigation">
+                <li>HOME</li>
+                <li>SHOP</li>
+                <li>ABOUT</li>
+                <li>CONTACT</li>
+            </ul>
+
+            <div id="sidebar">
+
+                <button id="filter-btn" onclick="filter()">Filter</button>
+    
+            </div>
+
+            <div id="filter">
+
+                <h3 class="mobile-hidden">Categories</h3>
+                <ul>
+                    <li id = "all" onclick = "filter(); getAll()">All</li>
+                    <li id = "tshirt" onclick = "filter(); filterItems(this)">T-Shirts</li>
+                    <li id = "shorts" onclick = "filter(); filterItems(this)">Shorts</li>
+                    <li id = "shoes" onclick = "filter(); filterItems(this)">Shoes</li>
+                    <li id = "accessories" onclick = "filter(); filterItems(this)">Accessories</li>
+
+                    <hr>
+
+                    <li id="price"><span class="mobile-hidden">Price</span> 
+                        <ul id="price-filter">
+                            <li id="40" onclick="filterPrice(this)">Under $40</li>
+                            <li id="60" onclick="filterPrice(this)">Under $60</li>    
+                            <li id="100" onclick="filterPrice(this)">Under $100</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div id="content"></div>
+
+            <div id="footer"></div>
+
+        </div>
         
-            <div id="dev-tools">
-                <p onclick="skillWindow()">Skill Window</p>
-            </div>
-
-            <!-- #endregion -->
-
-        </div>
-
-        <div id="skill-window">
-
-            <h2 id="skill-window-title">Skills</h2>
-
-            <div id="skillset-1">
-                <p>Strength: <span id="strength"></span></p>
-                <p>Speed: <span id="speed"></span></p>
-            </div>
-            
-            <div id="skillset-2">
-                <p>Stamina: <span id="stamina"></span></p>
-                <p>Intelligence: <span id="intelligence"></span></p>
-            </div>
-
-            <p id="skill-window-close" onclick="skillWindow()">Close</p>
-        </div>
-
     </body>
 </html>
