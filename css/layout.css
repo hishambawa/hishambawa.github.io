@@ -3,7 +3,7 @@
     min-height: 100vh;
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(calc(100vh/8), 80px) max-content minmax(calc(100vh/8), 80px) max-content 4fr minmax(calc(100vh/8), 80px);
+    grid-template-rows: minmax(calc(100vh/8), 80px) max-content minmax(calc(100vh/8), 80px) max-content 4fr minmax(calc(100vh/8), max-content);
     grid-template-areas: "header"
                          "navbar"
                          "sidebar"
@@ -37,4 +37,10 @@
 #footer{
     grid-area: footer;
     background-color: black;
+
+    display:grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: "about links contact"
+                         "about designer contact";
 }
