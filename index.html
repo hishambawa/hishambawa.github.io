@@ -26,10 +26,26 @@
                     <img src="icons/menu.svg">
                 </div>
 
-                <div id="cart">
+                <div id="cart" onclick="openCart()">
                     <img src="icons/bag.svg">
                 </div>
 
+            </div>
+
+            <div id="cart-content">
+                <span id="cart-title">Cart</span>
+                <div id="cart-items"></div>
+                <div id="cart-summary">
+                    <p>Total Items: 1</p>
+                    <p>Total Amount: $10</p>
+                </div>
+                <div id="cart-actions">
+                    <button onclick="closeCart()">Close</button>
+                    <button>Clear</button>
+                    <button>Checkout</button>
+                </div>
+
+                <span id="cart-close" onclick="closeCart()">X</span>
             </div>
 
             <ul id="navigation">

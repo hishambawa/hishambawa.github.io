@@ -22,6 +22,17 @@ function filter(){
     else{
         filter.style.display = "block";
     }
+}
 
-   
+
+
+function openCart(){
+    // document.getElementById("cart-content").style.display = "grid";
+    document.getElementById("cart-content").style.top = "0";
+}
+
+function closeCart(){
+    // document.getElementById("cart-content").style.display = "none";
+    document.getElementById("cart-content").style.top = "-100vh";
+
 }
