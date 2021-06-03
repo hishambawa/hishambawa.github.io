@@ -13,6 +13,7 @@
 
         <script src="javascript/product.js"></script>
         <script src="javascript/script.js"></script>
+        <script src="javascript/filter.js"></script>
     </head>
     <body>
         <div class="container" id="container">
@@ -49,19 +50,19 @@
 
                 <h3 class="mobile-hidden">Categories</h3>
                 <ul>
-                    <li id = "all" onclick = "//filter(); getAll()">All</li>
-                    <li id = "tshirt" onclick = "//filter(); filterItems(this)">T-Shirts</li>
-                    <li id = "shorts" onclick = "//filter(); filterItems(this)">Shorts</li>
-                    <li id = "shoes" onclick = "//filter(); filterItems(this)">Shoes</li>
-                    <li id = "accessories" onclick = "//filter(); filterItems(this)">Accessories</li>
+                    <li id = "all" onclick = "filterItems('all')">All</li>
+                    <li id = "tshirt" onclick = "filterItems('t-shirts')">T-Shirts</li>
+                    <li id = "shorts" onclick = "filterItems('shorts')">Shorts</li>
+                    <li id = "shoes" onclick = "filterItems('shoes')">Shoes</li>
+                    <li id = "accessories" onclick = "filterItems('accessories')">Accessories</li>
 
                     <hr>
 
                     <li id="price"><span class="mobile-hidden">Price</span> 
                         <ul id="price-filter">
-                            <li id="40" onclick="filterPrice(this)">Under $40</li>
-                            <li id="60" onclick="filterPrice(this)">Under $60</li>    
-                            <li id="100" onclick="filterPrice(this)">Under $100</li>
+                            <li id="40" onclick="//filterPrice(this)">Under $40</li>
+                            <li id="60" onclick="//filterPrice(this)">Under $60</li>    
+                            <li id="100" onclick="//filterPrice(this)">Under $100</li>
                         </ul>
                     </li>
                 </ul>

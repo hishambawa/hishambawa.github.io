@@ -21,8 +21,7 @@
 }
 
 #navigation a{
-    display: inline-block;
-    width: 100%;
+    display: block;
     padding: 1em 20px;
 }
 
@@ -124,6 +123,7 @@
     font-size: 0.8em;
     font-family: monospace;
     text-align: center;
+    margin: 0 0 10px 0;
 }
 
 #footer-designer p{

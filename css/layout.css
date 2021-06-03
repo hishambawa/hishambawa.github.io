@@ -37,6 +37,7 @@
 #footer{
     grid-area: footer;
     background-color: black;
+    padding: 10px;
 
     display:grid;
     grid-template-columns: 1fr 3fr 1fr;
