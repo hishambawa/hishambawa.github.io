@@ -200,7 +200,7 @@
     background-color: black;
     padding: 10px;
     /* width: 49%; */
-    width: calc(98%/3);
+    width: calc((100% / 3) - 3px);
 }
 
 #cart-close{
