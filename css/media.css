@@ -8,6 +8,12 @@
     }
 }
 
+@media screen and (orientation:landscape){
+    #content{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 @media(min-width:768px){
     .mobile-only{
         display: none;

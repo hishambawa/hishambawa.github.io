@@ -40,6 +40,10 @@
 #content{
     grid-area: content;
     z-index: 1;
+
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
 }
 
 #footer{
