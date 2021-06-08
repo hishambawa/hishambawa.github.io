@@ -51,7 +51,7 @@ function loadProducts(catagory){
             container.innerHTML += 
             `
             <div class="item" id=" `+ items[i].code +`">
-                <img src="https://dummyimage.com/600x400/000/fff" class="item-image">
+                <img src="https://dummyimage.com/600x600/000/fff" class="item-image">
                 <p class="item-name">`+ items[i].name +`</p>
                 <p class="item-price">$`+ items[i].price +`</p>
             </div>

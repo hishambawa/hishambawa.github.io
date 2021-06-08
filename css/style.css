@@ -157,10 +157,9 @@
 #cart-content{
     background-color: white;
     height: calc(100vh - 50px);
-    z-index: 1;
+    z-index: 2;
     position: absolute;
     width: calc(100% - 50px);
-    /* display: none; */
     padding: 25px;
     transition: 1s all;
     top: -100vh;
