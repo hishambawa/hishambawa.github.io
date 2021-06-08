@@ -30,6 +30,13 @@
                     <img src="icons/bag.svg">
                 </div>
 
+                <ul id="navigation">
+                    <li><a href="#">HOME</a></li>
+                    <li class="active"><a href="#">SHOP</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+
             </div>
 
             <div id="cart-content">
@@ -48,13 +55,6 @@
                 <span id="cart-close" onclick="closeCart()">X</span>
             </div>
 
-            <ul id="navigation">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">SHOP</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">CONTACT</a></li>
-            </ul>
-
             <div id="sidebar">
 
                 <span id="filter-label" class="mobile-only">All</span>
@@ -64,7 +64,7 @@
 
             <div id="filter">
 
-                <h3 class="mobile-hidden">Categories</h3>
+                <h3 class="mobile-hidden" id="filter-title">Categories</h3>
                 <ul>
                     <li id = "all" onclick = "filterItems('all')">All</li>
                     <li id = "tshirt" onclick = "filterItems('t-shirts')">T-Shirts</li>

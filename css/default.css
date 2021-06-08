@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@900&display=swap');
 
+html{
+    font-size: 16px;
+}
+
 body{
     padding: 0;
     margin: 0;

@@ -3,9 +3,8 @@
     min-height: 100vh;
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(calc(100vh/8), 80px) max-content minmax(calc(100vh/8), 80px) max-content 4fr minmax(calc(100vh/8), max-content);
+    grid-template-rows: repeat(5, max-content);
     grid-template-areas: "header"
-                         "navbar"
                          "sidebar"
                          "filter"
                          "content"
@@ -19,8 +18,9 @@
 
     display: grid;
     grid-template-columns: 4fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "logo cart menu";
+    grid-template-rows: 1fr max-content;
+    grid-template-areas: "logo cart menu"
+                         "navbar navbar navbar";
 
     align-items: center;
     justify-items: center;
@@ -34,7 +34,6 @@
 
     background-color: white;
     z-index: 1;
-
 }
 
 #content{
@@ -43,7 +42,10 @@
 
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: repeat(auto-fill, minmax(400px,1fr));
+
+    margin: 2rem;
+    grid-gap: 3rem;
 }
 
 #footer{
@@ -58,3 +60,4 @@
                          "about designer contact";
     z-index: 1;
 }
+
