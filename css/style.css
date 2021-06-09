@@ -102,6 +102,7 @@
 #filter ul li:not(#price):hover{
     background-color: black;
     color: white;
+    cursor: pointer;
 }
 
 #price-filter li{
