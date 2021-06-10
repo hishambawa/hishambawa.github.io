@@ -30,9 +30,9 @@ function filter(){
 
 function openCart(){
 
-    let windowWidth = window.innerWidth;
-
     document.getElementById("cart-content").style.top = "0";
+
+    // let windowWidth = window.innerWidth;
 
     // if(windowWidth > 1024){
     //     document.getElementById("cart-content").style.top = "25%";
@@ -53,20 +53,19 @@ function loadProducts(catagory){
 
     let container = document.getElementById("content");
 
+    let imageUrl = '<img src="https://dummyimage.com/600x600/f6f6f6/000" class="item-image" alt="product image">';
+
     container.innerHTML = "";
 
     for(var i in items){
 
         if(catagory == "all" || items[i].catagory == catagory){
             container.innerHTML += 
-            `
-            <div class="item" id=" `+ items[i].code +`">
-                <img src="https://dummyimage.com/600x600/f6f6f6/000" class="item-image" alt="product image">
+            `<div class="item" id=" `+ items[i].code +`">
+                <img src="images/image.png" class="item-image" alt="product image">
                 <p class="item-name">`+ items[i].name +`</p>
                 <p class="item-price">$`+ items[i].price +`</p>
-            </div>
-            `;
-
+             </div>`;
         }
     }
 }
@@ -100,4 +99,32 @@ let items =
         price:"50",
         catagory:"accessories"
     },
+
+    {
+        code:"001",
+        name:"Item Tshirt",
+        price:"25",
+        catagory:"tshirts"
+    },
+
+    {
+        code:"002",
+        name:"Item Shorts",
+        price:"40",
+        catagory:"shorts"
+    },
+
+    {
+        code:"003",
+        name:"Item Shoes",
+        price:"15",
+        catagory:"shoes"
+    },
+
+    {
+        code:"004",
+        name:"Item Accessories",
+        price:"50",
+        catagory:"accessories"
+    }
 ]

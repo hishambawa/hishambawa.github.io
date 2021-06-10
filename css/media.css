@@ -45,6 +45,7 @@
 
     #filter li{
         text-align: left;
+        padding: 0.7rem 20px;
     }
 
     #filter ul li:not(#price):hover{
@@ -57,9 +58,14 @@
         text-align: center;
         color: #808080;
         font-size: 2rem;
+        margin: 36px 0;
     }
 
     /* #endregion */
+
+    /* #region Header */
+
+    #menu{display: none;}
 
     #header{
         grid-template-columns: 2fr 5fr 1fr;
@@ -71,9 +77,15 @@
         margin-left: 0;
     }
 
+    #cart{
+        font-size: 0.8rem;
+    }
+
     .active a{
         color: red !important;
     }
+
+    /* #endregion */
 
     #sidebar{
         display: none;
@@ -108,8 +120,6 @@
     #cart-actions{
         width: 50%;
     }
-
-    #menu{display: none;}
 }
 
 @media (min-width:1025px){
@@ -126,11 +136,11 @@
     /* #region Filter */
 
     #filter-title{
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     #filter li{
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
 
     /* #endregion */

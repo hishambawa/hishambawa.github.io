@@ -43,6 +43,8 @@
 
 #cart{
     grid-area: cart;
+    display: inline-block; 
+    position: relative;
 }
 
 #cart:hover, #cart:active{
@@ -91,9 +93,9 @@
 }
 
 #filter li{
-    font-size: 1.17em;
+    font-size: 1.17rem;
     font-family: 'Raleway';
-    padding: 1em 20px;
+    padding: 1rem 20px;
     text-decoration: none;
     list-style-type: none;
     text-align: center;
@@ -110,12 +112,14 @@
 }
 
 #price{
-    padding: 0 !important;
-}
-
-#price span{
+    /* padding: 0 !important; */
     padding: 15px 20px;
 }
+
+/* #price span{
+    padding: 15px 20px;
+} */
+
 
 /* #endregion */
 
@@ -141,7 +145,7 @@
     font-size: 0.4rem;
     font-family: monospace;
     text-align: center;
-    margin: 0 0 10px 0;
+    margin: 10px 0;
 }
 
 #footer-designer p{
@@ -151,7 +155,7 @@
 #footer-contact{
     grid-area: contact;
     color: white;
-    margin:auto;
+    margin: 10px auto;
     padding: 0 5px 0 0;
 }
 
@@ -162,7 +166,7 @@
 #footer-about{
     grid-area: about;
     color: white;
-    margin:auto;
+    margin: 10px auto;
     padding: 0 0 0 5px;
 }
 
@@ -217,7 +221,7 @@
     color: white;
     background-color: black;
     padding: 10px;
-    /* width: calc((100% / 3) - 3px); */
+    cursor: pointer;
     width: calc((100% / 2) - 3px);
 
 }
@@ -228,6 +232,13 @@
     right: 0;
     padding: 20px;
     cursor: pointer;
+}
+
+#cart-count{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate( -50%, -50% );
 }
 /* #endregion */
 

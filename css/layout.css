@@ -55,9 +55,9 @@
 
     display:grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: max-content max-content;
     grid-template-areas: "about links contact"
-                         "about designer contact";
+                         "designer designer designer";
     z-index: 1;
 }
 

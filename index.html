@@ -13,7 +13,6 @@
         <link href="css/style.css" rel="stylesheet">
         <link href="css/media.css" rel="stylesheet">
 
-        <script src="javascript/product.js"></script>
         <script src="javascript/script.js"></script>
         <script src="javascript/filter.js"></script>
     </head>
@@ -30,6 +29,7 @@
 
                 <div id="cart" onclick="openCart()">
                     <img src="icons/bag.svg" alt="cart">
+                    <span id="cart-count">10</span>
                 </div>
 
                 <ul id="navigation">
@@ -66,55 +66,27 @@
 
             <div id="filter">
 
-                <h3 class="mobile-hidden" id="filter-title">Categories</h3>
+                <span class="mobile-hidden" id="filter-title">Categories</span>
                 <ul>
                     <li id = "all" onclick = "filterItems('all')">All</li>
                     <li id = "tshirt" onclick = "filterItems('t-shirts')">T-Shirts</li>
                     <li id = "shorts" onclick = "filterItems('shorts')">Shorts</li>
                     <li id = "shoes" onclick = "filterItems('shoes')">Shoes</li>
                     <li id = "accessories" onclick = "filterItems('accessories')">Accessories</li>
+                </ul>
 
-                    <hr>
+                <hr>
+                <span class="mobile-hidden" id="price">Price</span> 
 
-                    <li id="price"><span class="mobile-hidden">Price</span> 
-                        <ul id="price-filter">
-                            <li id="40" onclick="//filterPrice(this)">Under $40</li>
-                            <li id="60" onclick="//filterPrice(this)">Under $60</li>    
-                            <li id="100" onclick="//filterPrice(this)">Under $100</li>
-                        </ul>
-                    </li>
+                <ul id="price-filter">
+                    <li id="40" onclick="//filterPrice(this)">Under $40</li>
+                    <li id="60" onclick="//filterPrice(this)">Under $60</li>    
+                    <li id="100" onclick="//filterPrice(this)">Under $100</li>
                 </ul>
 
             </div>
 
-            <div id="content">
-
-                <!-- <div class="item">
-                    <img src="https://dummyimage.com/600x400/000/fff" class="item-image">
-                    <p class="item-name">Item One</p>
-                    <p class="item-price">$25</p>
-
-                    <div class="item-actions">
-
-                        <div class="size">
-                            <button>S</button>
-                            <button>M</button>
-                            <button>L</button>
-                        </div>
-
-                        <div class="quantity">
-                            <button>+</button>
-                            <input type="number"/>
-                            <button>-</button>
-                        </div>
-
-                        <div class="add">
-                            <button>Add</button>
-                        </div>
-                    </div>
-                </div> -->
-
-            </div>
+            <div id="content"></div>
 
             <div id="footer">
 
@@ -132,8 +104,8 @@
 
                 <div id="footer-contact" class="mobile-large">
                     <p>Contact Us</p>
-                    <p class="small-text">0710177336</p>
-                    <p class="small-text">hishambawa@icloud.com</p>
+                    <p class="small-text">07123456789</p>
+                    <p class="small-text">email@domain.com</p>
                 </div>
 
                 <div id="footer-about" class="mobile-large">
