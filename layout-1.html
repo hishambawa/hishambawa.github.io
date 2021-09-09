@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe | Layout 1</title>
+
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+    <link rel="stylesheet" href="assets/css/layout-1.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <img class="navbar__logo" src="assets/icons/logo-white.svg" alt="logo"/>
+
+            <ul class="navbar__links">
+                <li class="navbar__link"><a href="#work">Work</a></li>
+                <li class="navbar__link"><a href="#about">About</a></li>
+                <li class="navbar__link"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section>
+            <div class="landing">
+                <h1 class="landing__title">John Doe</h1>
+                <p class="landing__description">A short description of John Doe comes here. Fill it</p>
+            </div>
+        </section>
+
+        <section id="work">
+
+            <div class="work">
+
+                <div class="project">
+                    <img class="project__image" src="assets/images/work-demo.jpg" alt="work demo 1" width="1920" height="1280">
+
+                    <div class="project__content">
+                        <h1 class="project__title">Project Title</h1>
+                        <p class="project__description">A description of the project comes here. Fill it</p>
+                    </div>
+                </div>
+
+                <div class="project project--reversed">
+                    <img class="project__image" src="assets/images/work-demo-2.jpg" alt="work demo 2" width="1920" height="1280">
+
+                    <div class="project__content">
+                        <h1 class="project__title">Project Title</h1>
+                        <p class="project__description">A description of the project comes here. Fill it</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="about">
+
+            <div class="education">
+                <div class="education__content">
+                    <span class="fa-stack icon icon--large">
+                        <i class="fas fa-graduation-cap fa-stack-1x"></i>
+                        <i class="far fa-circle fa-stack-2x"></i>
+                    </span>
+                    <dl>
+                        <dt class="education__title">Some Qualification</dt>
+                        <dd class="education__institution">Some Institute</dd>
+                        <dd class="education__year">20xx - Present</dd>
+                    </dl>
+                </div>
+                <div class="education__content">
+                    <span class="fa-stack icon icon--large">
+                        <i class="fas fa-graduation-cap fa-stack-1x"></i>
+                        <i class="far fa-circle fa-stack-2x"></i>
+                    </span>
+
+                    <dl>
+                        <dt class="education__title">Some Qualification</dt>
+                        <dd class="education__institution">Some Institute</dd>
+                        <dd class="education__year">20xx - Present</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="career">
+                <div class="career__content">
+                    <span class="fa-stack icon icon--large">
+                        <i class="fas fa-briefcase fa-stack-1x"></i>
+                        <i class="far fa-circle fa-stack-2x"></i>
+                    </span>
+
+                    <dl>
+                        <dt class="career__title">Workplace Name</dt>
+                        <dd class="career__role">Role</dd>
+                        <dd class="career__year">20xx - Present</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="achievement">
+                <h1 class="achievement__title">Achievements</h1>
+
+                <dl>
+                    <dt class="achievement__institution">Institution</dt>
+                    <dd class="achievement__details">Achievement (20xx - 20xx)</dd>
+                    <dd class="achievement__details">Achievement (20xx - 20xx)</dd>
+                </dl>
+
+                <dl>
+                    <dt class="achievement__institution">Institution</dt>
+                    <dd class="achievement__details">Achievement (20xx - 20xx)</dd>
+                    <dd class="achievement__details">Achievement (20xx - 20xx)</dd>
+                </dl>
+            </div>
+
+            <div class="skills">
+                <h1 class="skills__title">Skills</h1>
+                <p class="skills__content">HTML CSS JavaScript 
+                    <br>Spring Boot MySQL 
+                    <br>Java C# Python
+                </p>
+            </div>
+
+        </section>
+
+        <section id="contact">
+
+            <div class="contact">
+                <h1 class="contact__email"><a href="mailto:johndoe@email.com">johndoe@email.com</a></h1>
+
+                <div class="contact__links">
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook icon icon--medium icon--row contact__link"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener"><i class="fab fa-instagram icon icon--medium icon--row contact__link"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin-in icon icon--medium icon--row contact__link"></i></a>
+                    <a href="https://www.twitter.com" target="_blank" rel="noopener"><i class="fab fa-twitter icon icon--medium icon--row contact__link"></i></a>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <hr class="footer__divider">
+        <p class="footer__developer">Made with <i class="fas fa-heart icon"></i> by Hisham Bawa</p>
+    </footer>
+
+    <div class="top">
+        <a href="#" onclick="//smoothScroll(0)"><i class="fas fa-arrow-up"></i></a>
+    </div>
+
+</body>
+</html>
