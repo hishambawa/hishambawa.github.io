@@ -2,23 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="A description of John Doe could come here.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John Doe | Layout 1</title>
 
     <link rel="stylesheet" href="assets/fontawesome/css/all.css">
     <link rel="stylesheet" href="assets/css/layout-1.css">
+
+    <script src="assets/js/common.js" defer></script>
 </head>
 <body>
 
     <header>
         <nav class="navbar">
-            <img class="navbar__logo" src="assets/icons/logo-white.svg" alt="logo"/>
+            <img class="navbar__logo" src="assets/icons/logo-white.svg" alt="logo" width="36" height="36"/>
 
             <ul class="navbar__links">
-                <li class="navbar__link"><a href="#work">Work</a></li>
-                <li class="navbar__link"><a href="#about">About</a></li>
-                <li class="navbar__link"><a href="#contact">Contact</a></li>
+                <li class="navbar__link" onclick="smoothScroll(document.getElementById('work').offsetTop)"><a href="#work">Work</a></li>
+                <li class="navbar__link" onclick="smoothScroll(document.getElementById('about').offsetTop)"><a href="#about">About</a></li>
+                <li class="navbar__link" onclick="smoothScroll(document.getElementById('contact').offsetTop)"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -37,7 +40,7 @@
             <div class="work">
 
                 <div class="project">
-                    <img class="project__image" src="assets/images/work-demo.jpg" alt="work demo 1" width="1920" height="1280">
+                    <img class="project__image" src="assets/images/demo.png" alt="work demo 1" width="1920" height="1280">
 
                     <div class="project__content">
                         <h1 class="project__title">Project Title</h1>
@@ -46,7 +49,7 @@
                 </div>
 
                 <div class="project project--reversed">
-                    <img class="project__image" src="assets/images/work-demo-2.jpg" alt="work demo 2" width="1920" height="1280">
+                    <img class="project__image project__image--reversed" src="assets/images/demo.png" alt="work demo 2" width="1920" height="1280">
 
                     <div class="project__content">
                         <h1 class="project__title">Project Title</h1>
@@ -61,11 +64,24 @@
         <section id="about">
 
             <div class="education">
+
                 <div class="education__content">
                     <span class="fa-stack icon icon--large">
                         <i class="fas fa-graduation-cap fa-stack-1x"></i>
                         <i class="far fa-circle fa-stack-2x"></i>
                     </span>
+                    <dl>
+                        <dt class="education__title">Some Qualification</dt>
+                        <dd class="education__institution">Some Institute</dd>
+                        <dd class="education__year">20xx - Present</dd>
+                    </dl>
+                </div>
+                <div class="education__content">
+                    <span class="fa-stack icon icon--large">
+                        <i class="fas fa-graduation-cap fa-stack-1x"></i>
+                        <i class="far fa-circle fa-stack-2x"></i>
+                    </span>
+
                     <dl>
                         <dt class="education__title">Some Qualification</dt>
                         <dd class="education__institution">Some Institute</dd>
@@ -87,6 +103,31 @@
             </div>
 
             <div class="career">
+
+                <div class="career__content">
+                    <span class="fa-stack icon icon--large">
+                        <i class="fas fa-briefcase fa-stack-1x"></i>
+                        <i class="far fa-circle fa-stack-2x"></i>
+                    </span>
+
+                    <dl>
+                        <dt class="career__title">Workplace Name</dt>
+                        <dd class="career__role">Role</dd>
+                        <dd class="career__year">20xx - Present</dd>
+                    </dl>
+                </div>
+                <div class="career__content">
+                    <span class="fa-stack icon icon--large">
+                        <i class="fas fa-briefcase fa-stack-1x"></i>
+                        <i class="far fa-circle fa-stack-2x"></i>
+                    </span>
+
+                    <dl>
+                        <dt class="career__title">Workplace Name</dt>
+                        <dd class="career__role">Role</dd>
+                        <dd class="career__year">20xx - Present</dd>
+                    </dl>
+                </div>
                 <div class="career__content">
                     <span class="fa-stack icon icon--large">
                         <i class="fas fa-briefcase fa-stack-1x"></i>
@@ -133,10 +174,10 @@
                 <h1 class="contact__email"><a href="mailto:johndoe@email.com">johndoe@email.com</a></h1>
 
                 <div class="contact__links">
-                    <a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook icon icon--medium icon--row contact__link"></i></a>
-                    <a href="https://www.instagram.com" target="_blank" rel="noopener"><i class="fab fa-instagram icon icon--medium icon--row contact__link"></i></a>
-                    <a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin-in icon icon--medium icon--row contact__link"></i></a>
-                    <a href="https://www.twitter.com" target="_blank" rel="noopener"><i class="fab fa-twitter icon icon--medium icon--row contact__link"></i></a>
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook Profile"><i class="fab fa-facebook icon icon--medium icon--row contact__link"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram Profile"><i class="fab fa-instagram icon icon--medium icon--row contact__link"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="Linkedin Profile"><i class="fab fa-linkedin-in icon icon--medium icon--row contact__link"></i></a>
+                    <a href="https://www.twitter.com" target="_blank" rel="noopener" aria-label="Twitter Profile"><i class="fab fa-twitter icon icon--medium icon--row contact__link"></i></a>
                 </div>
             </div>
 
@@ -149,8 +190,20 @@
         <p class="footer__developer">Made with <i class="fas fa-heart icon"></i> by Hisham Bawa</p>
     </footer>
 
-    <div class="top">
-        <a href="#" onclick="//smoothScroll(0)"><i class="fas fa-arrow-up"></i></a>
+    <div class="top" id="top">
+        <a href="#" onclick="smoothScroll(0)" aria-label="Back to Top"><i class="fas fa-arrow-up icon icon--medium top__icon"></i></a>
+    </div>
+
+    <div class="not-supported" id="incompatible">
+        <h1 class="not-supported__title">Your browser is not supported</h1>
+        <p>Please use one of the following browsers below or click any icon below to open this site on Microsoft Edge</p>
+
+        <span class="not-supported__icons">
+            <a href="#" id="chrome" title="Google Chrome"><i class="fab fa-chrome icon--not-supported icon--large icon--row"></i></a>
+            <a href="#" id="safari" title="Safari"><i class="fab fa-safari icon--not-supported icon--large icon--row"></i></a>
+            <a href="#" id="edge" title="Microsoft Edge"><i class="fab fa-edge icon--not-supported icon--large icon--row"></i></a>
+            <a href="#" id="firefox" title="Firefox"><i class="fab fa-firefox-browser icon--not-supported icon--large icon--row"></i></a>
+        </span>
     </div>
 
 </body>
