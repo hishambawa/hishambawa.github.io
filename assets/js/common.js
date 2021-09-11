@@ -30,8 +30,8 @@ window.addEventListener("scroll", function(event){
     }
 });
 
-// Show not supported dialog on IE
 window.addEventListener("load", function(){
+    // Show not supported dialog on IE
     var isIE = !!navigator.userAgent.match(/Trident/g) || !!navigator.userAgent.match(/MSIE/g);
     if(isIE){
         document.getElementById("incompatible").style.display = "flex";
@@ -41,4 +41,7 @@ window.addEventListener("load", function(){
         document.getElementById("edge").href = "microsoft-edge:" + document.URL;
         document.getElementById("firefox").href = "microsoft-edge:" + document.URL;
     } 
+
+    // Animate on Scroll
+    AOS.init({once: true});
 });

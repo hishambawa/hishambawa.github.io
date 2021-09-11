@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+dd {
+    margin: 0;
+}
+
+/* #region Icons */
+.icon {
+    color: var(--primary-color);
+}
+
+.icon--secondary {
+    color: var(--secondary-color);
+}
+
+.icon--inherit {
+    color: inherit;
+}
+
+.icon--row {
+    padding: 5px;
+}
+
+.icon--medium {
+    font-size: 1.5rem;
+}
+
+.icon--large {
+    font-size: 2.5em;
+}
+
+.icon--not-supported {
+    color: #FFF !important;
+}
+/* #endregion */
+
+/* #region Back to Top */
+.top{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.top__icon {
+    color: var(--secondary-color);
+}
+
+.top__icon:hover {
+    color: var(--primary-color);
+}
+/* #endregion */
+
+/* #region Not Supported */
+.not-supported {
+    display: none;
+    background-color: #000;
+    color: #FFF;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.not-supported--show {
+    display: flex !important;
+}
+/* #endregion */

@@ -8,9 +8,12 @@
     <title>John Doe | Layout 1</title>
 
     <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+    <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/layout-1.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <script src="assets/js/common.js" defer></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </head>
 <body>
 
@@ -43,15 +46,30 @@
                     <img class="project__image" src="assets/images/demo.png" alt="work demo 1" width="1920" height="1280">
 
                     <div class="project__content">
+                        <button class="project__button">
+                            <a class="project__button-link" href="#">
+                                <i class="fas fa-arrow-right icon icon--inherit icon--large project__button-icon"></i>
+                                <span class="project__button-text">Visit</span>
+                            </a>
+                        </button>
+
                         <h1 class="project__title">Project Title</h1>
                         <p class="project__description">A description of the project comes here. Fill it</p>
                     </div>
+
                 </div>
 
                 <div class="project project--reversed">
                     <img class="project__image project__image--reversed" src="assets/images/demo.png" alt="work demo 2" width="1920" height="1280">
 
                     <div class="project__content">
+                        <button class="project__button project__button--reversed">
+                            <a class="project__button-link" href="#">
+                                <i class="fas fa-arrow-right icon icon--inherit icon--large project__button-icon"></i>
+                                <span class="project__button-text">Visit</span>
+                            </a>
+                        </button>
+
                         <h1 class="project__title">Project Title</h1>
                         <p class="project__description">A description of the project comes here. Fill it</p>
                     </div>
