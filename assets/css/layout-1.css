@@ -103,16 +103,21 @@ body {
     color: #393939;
 }
 
-.project__image {
+.project__image-container {
     width: 100%;
     height: 100vw;
-    object-fit: contain;
-    padding: 20px;
-
     background-color: #6B6969;
+    padding: 20px;
+    display: flex;
 }
 
-.project__image--reversed {
+.project__image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.project__image-container--reversed {
     background-color: #ABA9A9;
 }
 
@@ -134,6 +139,7 @@ body {
     font-weight: 900;
     color: #FFF;
     margin-left: auto;
+    margin-bottom: auto;
     background-color: transparent;
 }
 
@@ -146,11 +152,15 @@ body {
     display: none;
 }
 
-.project__button-link:hover .project__button-icon{
+.project__button:hover {
+    cursor: pointer;
+}
+
+.project__button:hover .project__button-icon{
     display: block;
 }
 
-.project__button-link:hover .project__button-text {
+.project__button:hover .project__button-text {
     display: none;
 }
 
@@ -169,10 +179,11 @@ body {
         flex-direction: row-reverse;
     }
 
-    .project__image,
+    .project__image-container,
     .project__content {
         width: 50%;
         height: auto;
+        max-height: 600px;
         padding: 70px 40px;
     }
 }
