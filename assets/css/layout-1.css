@@ -21,7 +21,7 @@ body {
 }
 
 .navbar__logo {
-    
+    opacity: 0;
 }
 
 .navbar__links {
@@ -33,19 +33,10 @@ body {
 .navbar__link {
     display: inline-block;
     padding: 0 5px;
-
-    background: linear-gradient(to right, var(--primary-color), var(--primary-color) 50%, var(--secondary-color) 50%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% 100%;
-    background-position: 100%;
-    transition: background-position 500ms ease;
 }
 
 .navbar__link:hover {
     color: var(--primary-color);
-    background-position: 0 100%;
 }
 
 @media (min-width: 768px) {
@@ -130,8 +121,8 @@ body {
 }
 
 .project__button {
-    width: 75px;
-    height: 75px;
+    width: 76px;
+    height: 76px;
     border: 1px solid #FFF;
     border-radius: 100%;
     letter-spacing: 2px;
@@ -140,7 +131,7 @@ body {
     color: #FFF;
     margin-left: auto;
     margin-bottom: auto;
-    background-color: transparent;
+    position: relative;
 }
 
 .project__button--reversed {
@@ -148,12 +139,17 @@ body {
     color: #171717;
 }
 
-.project__button-icon{
-    display: none;
+.project__button-text, .project__button-icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    text-align: center;
 }
 
-.project__button:hover {
-    cursor: pointer;
+.project__button-icon{
+    display: none;
 }
 
 .project__button:hover .project__button-icon{
@@ -211,13 +207,13 @@ body {
 
 .education__title, 
 .career__title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 900;
 }
 
 .education__institution, 
 .career__role {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
 }
 

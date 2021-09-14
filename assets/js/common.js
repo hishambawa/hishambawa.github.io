@@ -35,11 +35,7 @@ window.addEventListener("load", function(){
     var isIE = !!navigator.userAgent.match(/Trident/g) || !!navigator.userAgent.match(/MSIE/g);
     if(isIE){
         document.getElementById("incompatible").style.display = "flex";
-
-        document.getElementById("chrome").href = "microsoft-edge:" + document.URL;
-        document.getElementById("safari").href = "microsoft-edge:" + document.URL;
-        document.getElementById("edge").href = "microsoft-edge:" + document.URL;
-        document.getElementById("firefox").href = "microsoft-edge:" + document.URL;
+        document.getElementById("edge-url").href = "microsoft-edge:" + document.URL;
     } 
 
     // Animate on Scroll
