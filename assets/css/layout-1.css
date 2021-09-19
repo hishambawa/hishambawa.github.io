@@ -14,7 +14,7 @@ body {
 
 /* #region Navbar */
 .navbar {
-    color: #FFF;
+    color: var(--secondary-color);
     display: flex;
     align-items: center;
     padding: 20px;
@@ -48,8 +48,8 @@ body {
 
 /* #region Landing */
 .landing {
-    color: #FFF;
-    height: calc(100vh - 56px);
+    color: var(--secondary-color);
+    min-height: calc(100vh - 56px);
     padding: 20px;
 
     display: flex;
@@ -66,13 +66,16 @@ body {
 .landing__description {
     font-size: 1.5rem;
     font-weight: 700;
-    width: 80%;
     max-width: 350px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 600px) {
     .landing__title {
         font-size: 5rem;
+    }
+
+    .landing__description {
+        max-width: 500px;
     }
 }
 /* #endregion */
@@ -84,7 +87,7 @@ body {
 
 .project {
     background-color: #73706F;
-    color: #FFF;
+    color: var(--secondary-color);
     display: flex;
     flex-wrap: wrap;
 }
@@ -199,7 +202,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #FFF;
+    color: var(--secondary-color);
     text-align: center;
     padding: 70px 20px;
     width: 100%;
@@ -224,7 +227,7 @@ body {
 
 .achievement, 
 .skills {
-    color: #FFF;
+    color: var(--secondary-color);
     padding: 70px 40px;
     max-width: 1200px;
     margin: 0 auto;
@@ -279,7 +282,7 @@ body {
 }
 
 .contact__email {
-    color: #FFF;
+    color: var(--secondary-color);
     font-size: 1.75rem;
     font-weight: 900;
 
@@ -298,7 +301,7 @@ body {
 }
 
 .contact__link:hover {
-    color: #FFF;
+    color: var(--secondary-color);
 }
 
 @media (min-width: 768px) {
@@ -316,11 +319,11 @@ body {
 }
 
 .footer__divider {
-    background-color: #FFF;
+    background-color: var(--secondary-color);
 }
 
 .footer__developer {
-    color: #FFF;
+    color: var(--secondary-color);
     font-size: 0.75rem;
     font-weight: 700;
     text-align: right;
