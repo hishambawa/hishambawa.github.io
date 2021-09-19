@@ -1,0 +1,522 @@
+html{
+    background-image: linear-gradient(0deg, #fcda53, #f9c13a);
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container{
+    padding: 25px 0;
+}
+
+input{
+    outline: none;
+}
+
+li{
+    list-style: none;
+}
+
+/* #region Cart */
+
+.cart{
+    width: 24px;
+    height: 24px;
+    padding: 5px;
+    border-radius: 100%;
+    text-align: center;
+    top:25px;
+    right:50px;
+    position:absolute;
+    flex: 1 1 auto;
+    background-color: #ffffff;
+}
+
+.cart:hover{
+    border: 1px solid #808080;
+}
+
+.cart-content{
+    width: 20vw;
+    max-height: 60vh;
+    overflow-x: auto;
+    background-color: #ffffff;
+    border-radius: 25px;
+    transition: 1s all;
+    transform: scale(0);
+    transform-origin: 100% 0%;
+    position: absolute;
+    z-index: 1;
+    top: 70px;
+    right: 5%;
+}
+
+.cart-content h2{
+    color: #000000 !important;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.cart:hover + .cart-content{
+    transform: scale(1);
+    border: 1px solid #808080;
+}
+
+.cart-content:hover{
+    transform: scale(1);
+    border: 1px solid #808080;
+}
+
+.cart-item p{
+    color: #000000 !important;
+    font-size: small;
+}
+
+.cart-item{
+    display: flex;
+    align-items: center;
+    transition: transform 1s 0s; 
+}
+
+.deleted{ 
+    transform: scale(0);
+    transform-origin: 50% 50%;
+} 
+
+.cart-item ul{
+    font-size: 10px;
+    padding: 0;
+}
+
+.cart-item img{
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+}
+
+.cart-item figcaption{
+    font-size: 7px;
+}
+
+.cart-actions{
+    display: flex;
+    justify-content: center;
+}
+
+.cart-actions input{
+    color: #ffffff;
+    background-color: #111111;
+    border-radius: 25px;
+    width: 30%;
+    height: 30px;
+    font-family: 'Raleway';
+    font-size: x-small;
+    margin: 10px;
+    border: none;
+}
+
+.delete{
+    margin-left: auto;
+    margin-right: 10px !important;
+    padding: 0 !important;
+    width: 25px !important;
+    height: 25px !important;
+}
+
+.delete:active{
+    border-radius: 25px;
+    border: 1px solid #808080;
+    padding: 0;
+}
+
+.added-to-cart{
+    width: 20vw;
+    background-color: #ffffff;
+    border-radius: 25px;
+    transition: 1s all;
+    transform: scale(0);
+    transform-origin: 100% 0%;
+    position: absolute;
+    text-align: center;
+    top: 90px;
+    right: 5%;
+    border: 1px solid #808080;
+}
+
+.add-to-cart img{
+    width: 25px !important;
+    height: 25px !important;
+}
+
+/* #endregion */
+
+/* #region Popup Modal*/
+
+#popup-modal{
+    position: fixed;
+    height: 50%;
+    width: 50%;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    top: 50%;
+    margin: auto;
+    border-radius: 25px;
+    background-color: white;
+    border: 1px solid #808080;
+    padding: 10px;
+    transform: scale(0);
+    overflow: hidden;
+    transition: all 1s;
+}
+
+#modal-title{
+    text-align: center;
+}
+
+#modal-body{
+    height: 70%;
+}
+
+#modal-close{
+    float: right;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* #endregion */
+
+/* #region Checkout */
+
+#item-list{
+    width: 50%;
+    height: 70%;
+    float: left;
+    overflow: auto;
+}
+
+#item-list label{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#bill{
+    width: 45%;
+    height: 100%;
+    position: relative;
+    float: right;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#btn-checkout{
+    color: #ffffff;
+    background-color: #111111;
+    border-radius: 25px;
+    width: 30%;
+    height: 30px;
+    font-family: 'Raleway';
+    font-size: x-small;
+    margin: 10px;
+    border: none;
+    float: right;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+
+/* #endregion*/
+
+/* #region Invoice Form*/
+
+.invoice-label{
+    float: left;
+    margin: 5px;
+    padding: 5px;
+}
+
+.invoice-input{
+    float: right;
+    margin: 5px;
+    padding: 5px;
+    width: 50%;
+}
+
+.input-group{
+    clear: both;
+}
+
+/* #endregion */
+
+/* #region Invoice */
+
+.invoice-modal{
+    height: 70% !important;
+    width: 40% !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#invoice-header{
+    font-size: 15px;
+}
+
+#invoice-body{
+    height: 44%;
+    overflow: auto;
+}
+
+#invoice-body table{
+    text-align: center;
+    width: 100%;
+    padding: 25px;
+}
+
+#invoice-body th, td{
+    border: 1px solid gray;
+}
+
+#invoice-footer{
+    float: right;
+    margin: 5%;
+}
+
+/* #endregion */
+
+/* #region Products */
+
+.item-container{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    float:right;
+    width: 70vw;
+    margin-top: 100px;
+    transition: 1s all;
+    text-align: center;
+    padding-bottom: 35px;
+    padding-right: 40px;
+}
+
+.items{
+    padding:20px;
+    margin: 10px;
+    font-size: 30px;
+    background-color: #f6f6f6;
+    border-radius: 25px;
+    height: 18vw;
+    width: 18vw;
+}
+
+.image img{
+    height: 15vw;
+    width: 14vw;
+}
+
+.shoes .image img{
+    width: 15vw;
+}
+
+.items:hover .image img{
+    height: 13vw;
+    width: 11vw;
+}
+
+.shoes:hover .image img{
+    width: 13vw;
+    height: 13vw;
+}
+
+figcaption{
+    text-align: center;
+    font-size: 16px;
+    color: #808080;
+}
+
+.price{
+    color: #000000;
+}
+
+.items:hover{
+    transform: scale(1.1);
+    border: 1px solid #c0bdbd;
+    z-index: 10; 
+}
+
+.cart-options{
+    width: 18vw;
+    height: 5vh;
+    background-color: #f6f6f6;
+    display: none;
+}
+
+.items:hover .cart-options{
+    display: block;
+}
+
+/* #endregion */
+
+/* #region Size Chart */
+
+.size{
+    display: inline;
+}
+
+.size input{
+    display: none;
+  }
+  
+.size span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    font-size: 10px;
+    text-align: center;
+    border: 1px solid #808080;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.size span:hover{
+    border: 1px solid #a9a9a9;
+}
+
+.size span:active{
+    border: 1px solid #808080;
+}
+ 
+/* #endregion */
+
+/* #region Quantity */
+
+.quantity{
+    display: inline;
+}
+
+.quantity input[type=text]{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+}
+
+.quantity input[type=button]{
+    border-radius: 25px;
+    border: none;
+    background-color: #ffffff;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.quantity input[type=button]:hover{
+    border: 1px solid #a9a9a9;
+    border-radius: 25px;
+}
+
+.quantity input[type=button]:active{
+    border: 1px solid #808080;
+    border-radius: 25px;
+    color: #000000;
+}
+
+._cart{
+    display: inline;
+}
+
+/* #endregion */
+
+/* #region Add to Cart Button */
+
+.add-to-cart{
+    background: url(../images/icons/bag.svg);
+    background-repeat: no-repeat; 
+    width: 20px; 
+    height: 20px; 
+    border: none;
+    margin-left: 1vw;
+    margin-bottom: -4px;
+}
+
+.add-to-cart:hover{
+    filter: invert(50%)
+}
+
+.add-to-cart:active{
+    border: 1px solid #808080;
+    border-radius: 20px;
+    transform: scale(1.1);
+}
+
+/* #endregion */
+
+/* #region Product Filter */
+
+.filter{
+    float: left;
+    width: 20vw;
+    height: 75vh;
+    background-color: #ffffff;
+    border-radius: 25px;
+    margin-top: 120px;
+    margin-left: 3%;
+    position:fixed;
+    text-align: center;
+}
+
+.filter:hover{
+    z-index: 1;
+}
+
+.filter ul li{
+    padding: 10px;
+    text-align: left;
+
+}
+
+.filter ul li:not(#price):hover{
+    transform: scale(1.2);
+    transform-origin: 20% 80%;
+    cursor: pointer;
+}
+
+.filter .price-filter{
+    display: none;
+}
+
+.filter #price:hover .price-filter{
+    display: block;
+}
+
+.filter h3{
+    font-family: 'Raleway', sans-serif;
+}
+
+/* #endregion */
+
+.mobile-error {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    color: #FFF;
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1024px) {
+    .mobile-error {
+        display: flex;
+    }
+
+    .container {
+        display: none;
+    }
+}

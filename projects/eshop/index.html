@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The ARENA | Store</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="css/main.css" rel="stylesheet">
+        <link href="css/products.css" rel="stylesheet">
+
+        <script src="javascript/products.js"></script>
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="navbar">
+
+                <a href="#" class="logo">ARENA</a>
+
+                <ul class="nav">
+                    <li><a class="nav-link" href="#">HOME</a></li>
+                    <li><a class="nav-link" href="#">QUIZ</a></li>
+                    <li><a class="nav-linkc" href="#">PRODUCTS</a></li>
+                    <li><a class="nav-link" href="#">GALLERY</a></li>
+                    <li><a class="nav-link" href="#">CONTACT</a></li>
+                </ul>
+
+                <div class="cart" onmouseover="blurItems()" onmouseout="unblurItems()">
+                    <img src="images/icons/bag.svg">
+                </div>
+    
+                <div class="cart-content" onmouseover="blurItems()" onmouseout="unblurItems()">
+                        <h2>Cart</h2>
+                        <div class="items" style="all:unset"></div>   
+                        <div class="cart-actions">
+                            <input type="button" value="Clear" onclick="clearCart(this)">
+                            <input type="button" value="View Cart" onclick="showModal('showCart')">
+                        </div>                     
+                </div>
+
+                <div class="added-to-cart">
+                    <span>Added to Cart</span>
+                </div>
+            </div>
+
+            <div id="popup-modal">
+                <span id="modal-close" onclick="hideModal()">x</span>
+                <h3 id = 'modal-title'>Invoice</h1>
+                <div id="modal-body"></div>
+            </div>
+
+            <div class="filter"onclick="hideModal()">
+                <h3>Categories</h3>
+                <ul>
+                    <li id = "all" onclick = "getAll()">All</li>
+                    <li id = "tshirt" onclick = "filterItems(this)">T-Shirts</li>
+                    <li id = "shorts" onclick = "filterItems(this)">Shorts</li>
+                    <li id = "shoes" onclick = "filterItems(this)">Shoes</li>
+                    <li id = "accessories" onclick = "filterItems(this)">Accessories</li>
+
+                    <hr>
+
+                    <li id="price">Price 
+                        <ul class="price-filter">
+                            <li id="40" onclick="filterPrice(this)">Under $40</li>
+                            <li id="60" onclick="filterPrice(this)">Under $60</li>    
+                            <li id="100" onclick="filterPrice(this)">Under $100</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="item-container" onclick="hideModal()">
+
+                <div class="items tshirt">
+                    <div class="image">
+                        <img src="images/products/tshirt_1.jpg">
+                        <figcaption>Short Sleeve T-Shirt</figcaption>
+                        <figcaption class="price">$30</figcaption>
+                    </div>
+
+                    <div class="cart-options">
+            
+                        <div class="size">
+                            <input type="checkbox" name="s-size" class="s"/>
+                            <input type="checkbox" name="s-size" class="m"/>
+                            <input type="checkbox" name="s-size" class="l"/>
+
+                            <span onclick="selectSize(this)">S</span>
+                            <span onclick="selectSize(this)">M</span>
+                            <span onclick="selectSize(this)">L</span>
+                        </div>
+
+                        <dic class="quantity">
+
+                            <input type="button" name = "minus" value="-" onclick="changeQuantity(this)">
+                            <input type="text" value = 0 maxlength="2">
+                            <input type="button" name = "plus" value="+" onclick="changeQuantity(this)">
+
+                        </dic>
+
+                        <div class="_cart">
+                            <input class="add-to-cart" type="button" onclick="addToCart(this)">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="items tshirt">
+
+                    <div class="image">
+                        <img src="images/products/tshirt_2.jpg">
+                        <figcaption>Sweatshirt</figcaption>
+                        <figcaption class="price">$75</figcaption>
+                    </div>
+
+                    <div class="cart-options">
+            
+                        <div class="size">
+                            <input type="checkbox" name="s-size" class="s"/>
+                            <input type="checkbox" name="s-size" class="m"/>
+                            <input type="checkbox" name="s-size" class="l"/>
+
+                            <span onclick="selectSize(this)">S</span>
+                            <span onclick="selectSize(this)">M</span>
+                            <span onclick="selectSize(this)">L</span>
+                        </div>
+
+                        <dic class="quantity">
+
+                            <input type="button" name = "minus" value="-" onclick="changeQuantity(this)">
+                            <input type="text" value = 0 maxlength="2">
+                            <input type="button" name = "plus" value="+" onclick="changeQuantity(this)">
+
+                        </dic>
+
+                        <div class="_cart">
+                            <input class="add-to-cart" type="button" onclick="addToCart(this)">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="items shorts">
+
+                    <div class="image">
+                        <img src="images/products/short_1.jpg">
+                        <figcaption>Basketball Shorts</figcaption>
+                        <figcaption class="price">$50</figcaption>
+                    </div>
+
+                    <div class="cart-options">
+            
+                        <div class="size">
+                            <input type="checkbox" name="s-size" class="s"/>
+                            <input type="checkbox" name="s-size" class="m"/>
+                            <input type="checkbox" name="s-size" class="l"/>
+
+                            <span onclick="selectSize(this)">S</span>
+                            <span onclick="selectSize(this)">M</span>
+                            <span onclick="selectSize(this)">L</span>
+                        </div>
+
+                        <dic class="quantity">
+
+                            <input type="button" name = "minus" value="-" onclick="changeQuantity(this)">
+                            <input type="text" value = 0 maxlength="2">
+                            <input type="button" name = "plus" value="+" onclick="changeQuantity(this)">
+
+                        </dic>
+
+                        <div class="_cart">
+                            <input class="add-to-cart" type="button" onclick="addToCart(this)">
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="items shorts">
+
+                    <div class="image">
+                        <img src="images/products/short_2.jpg">
+                        <figcaption>Running Shorts</figcaption>
+                        <figcaption class="price">$35</figcaption>
+                    </div>
+
+                    <div class="cart-options">
+            
+                        <div class="size">
+                            <input type="checkbox" name="s-size" class="s"/>
+                            <input type="checkbox" name="s-size" class="m"/>
+                            <input type="checkbox" name="s-size" class="l"/>
+
+                            <span onclick="selectSize(this)">S</span>
+                            <span onclick="selectSize(this)">M</span>
+                            <span onclick="selectSize(this)">L</span>
+                        </div>
+
+                        <dic class="quantity">
+
+                            <input type="button" name = "minus" value="-" onclick="changeQuantity(this)">
+                            <input type="text" value = 0 maxlength="2">
+                            <input type="button" name = "plus" value="+" onclick="changeQuantity(this)">
+
+                        </dic>
+
+                        <div class="_cart">
+                            <input class="add-to-cart" type="button" onclick="addToCart(this)">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="items tshirt">
+                    
+                    <div class="image">
+                        <img src="images/products/tshirt_3.jpg">
+                        <figcaption>Short Sleeve T-Shirt</figcaption>
+                        <figcaption class="price">$30</figcaption>
+                    </div>
+
+                    <div class="cart-options">
+            
+                        <div class="size">
+                            <input type="checkbox" name="s-size" class="s"/>
+                            <input type="checkbox" name="s-size" class="m"/>
+                            <input type="checkbox" name="s-size" class="l"/>
+
+                            <span onclick="selectSize(this)">S</span>
+                            <span onclick="selectSize(this)">M</span>
+                            <span onclick="selectSize(this)">L</span>
+                        </div>
+
+                        <dic class="quantity">
+
+                            <input type="button" name = "minus" value="-" onclick="changeQuantity(this)">
+                            <input type="text" value = 0 maxlength="2">
+                            <input type="button" name = "plus" value="+" onclick="changeQuantity(this)">
+
+                        </dic>
+
+                        <div class="_cart">
+                            <input class="add-to-cart" type="button" onclick="addToCart(this)">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="items accessories">
+                    
+                    <div class="image">
+                        <img src="images/products/soccer_ball.jpg">
+                        <figcaption>Soccer Ball</figcaption>
+                        <figcaption class="price">$130</figcaption>
+                    </div>
+
+                    <div class="cart-options">
+
+                        <dic class="quantity">
+
+                            <input type="button" name = "minus" value="-" onclick="changeQuantity(this)">
+                            <input type="text" value = 0 maxlength="2">
+                            <input type="button" name = "plus" value="+" onclick="changeQuantity(this)">
+
+                        </dic>
+
+                        <div class="_cart">
+                            <input class="add-to-cart" type="button" onclick="addToCart(this)">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="items accessories">
+                    
+                    <div class="image">
+                        <img src="images/products/basketball.jpg">
+                        <figcaption>Basketball</figcaption>
+                        <figcaption class="price">$70</figcaption>
+                    </div>
+
+                    <div class="cart-options">
+
+                        <dic class="quantity">
+
+                            <input type="button" name = "minus" value="-" onclick="changeQuantity(this)">
+                            <input type="text" value = 0 maxlength="2">
+                            <input type="button" name = "plus" value="+" onclick="changeQuantity(this)">
+
+                        </dic>
+
+                        <div class="_cart">
+                            <input class="add-to-cart" type="button" onclick="addToCart(this)">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="items shorts">
+
+                    <div class="image">
+                        <img src="images/products/short_3.jpg">
+                        <figcaption>Soccer Shorts</figcaption>
+                        <figcaption class="price">$50</figcaption>
+                    </div>
+
+                    <div class="cart-options">
+            
+                        <div class="size">
+                            <input type="checkbox" name="s-size" class="s"/>
+                            <input type="checkbox" name="s-size" class="m"/>
+                            <input type="checkbox" name="s-size" class="l"/>
+
+                            <span onclick="selectSize(this)">S</span>
+                            <span onclick="selectSize(this)">M</span>
+                            <span onclick="selectSize(this)">L</span>
+                        </div>
+
+                        <dic class="quantity">
+
+                            <input type="button" name = "minus" value="-" onclick="changeQuantity(this)">
+                            <input type="text" value = 0 maxlength="2">
+                            <input type="button" name = "plus" value="+" onclick="changeQuantity(this)">
+
+                        </dic>
+
+                        <div class="_cart">
+                            <input class="add-to-cart" type="button" onclick="addToCart(this)">
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="items accessories">
+                    
+                    <div class="image">
+                        <img src="images/products/football.jpg">
+                        <figcaption>Football</figcaption>
+                        <figcaption class="price">$90</figcaption>
+                    </div>
+
+                    <div class="cart-options">
+
+                        <dic class="quantity">
+
+                            <input type="button" name = "minus" value="-" onclick="changeQuantity(this)">
+                            <input type="text" value = 0 maxlength="2">
+                            <input type="button" name = "plus" value="+" onclick="changeQuantity(this)">
+
+                        </dic>
+
+                        <div class="_cart">
+                            <input class="add-to-cart" type="button" onclick="addToCart(this)">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="items shoes">
+
+                    <div class="image">
+                        <img src="images/products/shoe_1.jpg">
+                        <figcaption>Running Shoes</figcaption>
+                        <figcaption class="price">$120</figcaption>
+                    </div>
+
+                    <div class="cart-options">
+            
+                        <div class="size">
+                            <input type="checkbox" name="s-size" checked/>
+                            <input type="checkbox" name="s-size"/>
+                            <input type="checkbox" name="s-size"/>
+
+                            <span onclick="selectSize(this)">10</span>
+                            <span onclick="selectSize(this)">11</span>
+                            <span onclick="selectSize(this)">12</span>
+                        </div>
+
+                        <dic class="quantity">
+
+                            <input type="button" name = "minus" value="-" onclick="changeQuantity(this)">
+                            <input type="text" value = 0 maxlength="2">
+                            <input type="button" name = "plus" value="+" onclick="changeQuantity(this)">
+
+                        </dic>
+
+                        <div class="_cart">
+                            <input class="add-to-cart" type="button" onclick="addToCart(this)">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="items shoes">
+
+                    <div class="image">
+                        <img src="images/products/shoe_2.jpg">
+                        <figcaption>Basketball Shoes</figcaption>
+                        <figcaption class="price">$180</figcaption>
+                    </div>
+
+                    <div class="cart-options">
+            
+                        <div class="size">
+                            <input type="checkbox" name="s-size" checked/>
+                            <input type="checkbox" name="s-size"/>
+                            <input type="checkbox" name="s-size"/>
+
+                            <span onclick="selectSize(this)">10</span>
+                            <span onclick="selectSize(this)">11</span>
+                            <span onclick="selectSize(this)">12</span>
+                        </div>
+
+                        <dic class="quantity">
+
+                            <input type="button" name = "minus" value="-" onclick="changeQuantity(this)">
+                            <input type="text" value = 0 maxlength="2">
+                            <input type="button" name = "plus" value="+" onclick="changeQuantity(this)">
+
+                        </dic>
+
+                        <div class="_cart">
+                            <input class="add-to-cart" type="button" onclick="addToCart(this)">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="items shoes">
+
+                    <div class="image">
+                        <img src="images/products/shoe_3.jpg">
+                        <figcaption>Soccer Cleats</figcaption>
+                        <figcaption class="price">$250</figcaption>
+                    </div>
+
+                    <div class="cart-options">
+            
+                        <div class="size">
+                            <input type="checkbox" name="s-size" checked/>
+                            <input type="checkbox" name="s-size"/>
+                            <input type="checkbox" name="s-size"/>
+
+                            <span onclick="selectSize(this)">10</span>
+                            <span onclick="selectSize(this)">11</span>
+                            <span onclick="selectSize(this)">12</span>
+
+                        </div>
+
+                        <dic class="quantity">
+
+                            <input type="button" name = "minus" value="-" onclick="changeQuantity(this)">
+                            <input type="text" value = 0 maxlength="2">
+                            <input type="button" name = "plus" value="+" onclick="changeQuantity(this)">
+
+                        </dic>
+
+                        <div class="_cart">
+                            <input class="add-to-cart" type="button" onclick="addToCart(this)">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="mobile-error">
+            <h1>Oops :(</h1>
+            <p>Please use a computer to view this site as it is not responsive yet :(</p>
+        </div>
+
+    </body>
+</html>
