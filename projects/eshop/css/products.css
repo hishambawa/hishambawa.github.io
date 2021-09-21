@@ -345,7 +345,7 @@ figcaption{
 }
 
 .cart-options{
-    width: 18vw;
+    /* width: 18vw; */
     height: 5vh;
     background-color: #f6f6f6;
     display: none;
