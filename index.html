@@ -2,189 +2,186 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="A description of John Doe could come here.">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hisham Bawa | Front-End Developer</title>
+    <title>Hisham Bawa</title>
 
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
-    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
-    <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/layout-1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="assets/js/common.js" defer></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
 </head>
 <body>
 
-    <header>
-        <nav class="navbar">
-            <ul class="navbar__links">
-                <li class="navbar__link" onclick="smoothScroll(document.getElementById('work').offsetTop)" data-aos="fade-down" data-aos-duration="1000"><a href="#work">Work</a></li>
-                <li class="navbar__link" onclick="smoothScroll(document.getElementById('about').offsetTop)" data-aos="fade-down" data-aos-duration="1500"><a href="#about">About</a></li>
-                <li class="navbar__link" onclick="smoothScroll(document.getElementById('contact').offsetTop)" data-aos="fade-down" data-aos-duration="2000"><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="navbar">
+        <div class="container">
+
+            <div class="navbar-brand">
+                <a href="#" class="navbar-item">
+                    <img src="assets/images/logo.png" alt="Logo" width="50">
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="menu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div class="navbar-menu" id="menu">
+                <div class="navbar-end">
+                    <a href="#work" class="navbar-item">Work</a>
+                    <a href="#contact" class="navbar-item">Contact</a>
+                </div>
+            </div>
+              
+        </div>
+    </nav>
 
     <main>
 
-        <section>
-            <div class="landing">
-                <h1 class="landing__title" data-aos="fade-up" data-aos-duration="2000">Hisham Bawa</h1>
-                <p class="landing__description" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1000">
-                    A self driven individual, aspiring to explore new horizons in the field of IT with an appetite for web design & development
-                </p>
+        <!-- #region Hero -->
+        <section class="hero is-fullheight">
+            <div class="hero-body">
+                <div class="container">
+                    <p class="title mb-0 is-1">Hey &#128075;&#127996;</p>
+                    <p class="title is-2">I'm Hisham Bawa</p>
+                    <p class="subtitle">A self driven individual, aspiring to explore new horizons in the field of IT with an appetite for web design & development</p>
+                </div>  
             </div>
         </section>
+        <!-- #rendregion -->
 
-        <section id="work">
+        <!-- #region Work -->
+        <section class="container px-5 section has-text-centered" id="work">
+            <h1 class="title pb-6 has-text-weight-bold">My Recent Projects</h1>
+            <p class="subtitle is-6 is-hidden-tablet">Hint: Hold image to visit the site</p>
 
-            <div class="work">
+            <div class="columns is-multiline is-centered">
 
-                <div class="project">
-                    <div class="project__image-container">
-                        <img class="project__image" src="assets/images/hisham.bawa/work-1.png" alt="wirklink homepage" width="1920" height="1280" data-aos="zoom-in" data-aos-duration="3000" data-aos-delay="1000">
-                    </div>
-
-                    <div class="project__content">
-                        <a class="project__button" href="https://www.wirklink.com" target="_blank" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500">
-                            <i class="fas fa-arrow-right icon icon--inherit icon--large project__button-icon"></i>
-                            <span class="project__button-text">Visit</span>
-                        </a>
-
-                        <h2 class="project__title" data-aos="fade-up" data-aos-duration="2000">Wirklink</h2>
-                        <p class="project__description" data-aos="fade-up" data-aos-duration="2000">A website focused on connecting customers that have various needs with competent service providers</p>
-                    </div>
-
+                <div class="column is-half-tablet is-one-third-desktop">
+                    <figure class="image is-3by2">
+                        <img class="br-12" src="assets/images/wirklink.jpeg" alt="Wirklink">
+                        <figcaption>
+                            <h1 class="title is-5 is-size-4-widescreen has-text-white">Connecting customers with competent service providers to fulfill their needs</h1>
+                            <a class="button is-primary is-rounded is-outlined" href="www.wirklink.com" target="_blank">Visit site</a>
+                        </figcaption>
+                      </figure>
                 </div>
 
-                <div class="project project--reversed">
-                    <div class="project__image-container project__image-container--reversed">
-                        <img class="project__image" src="assets/images/hisham.bawa/work-2.png" alt="shop template" width="1920" height="1280" data-aos="zoom-in" data-aos-duration="3000" data-aos-delay="1000">
-                    </div>
-                    
-                    <div class="project__content">
-                        <a class="project__button project__button--reversed" href="https://hishambawa.github.io/projects/eshop/index.html" target="_blank" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500">
-                            <i class="fas fa-arrow-right icon icon--inherit icon--large project__button-icon"></i>
-                            <span class="project__button-text">Visit</span>
-                        </a>
+                <div class="column is-half-tablet is-one-third-desktop">
+                    <figure class="image is-3by2">
+                        <img class="br-12" src="assets/images/shop.jpeg" alt="eCommerce Template">
+                        <figcaption>
+                            <h1 class="title is-5 is-size-4-widescreen has-text-white">A functional eCommerce template created for a University Project</h1>
+                            <a class="button is-primary is-rounded is-outlined" href="https://hishambawa.github.io/projects/eshop/index.html" target="_blank">Visit site</a>
+                        </figcaption>
+                      </figure>
+                </div>
 
-                        <h2 class="project__title" data-aos="fade-up" data-aos-duration="2000">eCommerce Template</h2>
-                        <p class="project__description" data-aos="fade-up" data-aos-duration="2000">A functional eCommerce template created for a University Project</p>
-                    </div>
+                <div class="column is-half-tablet is-one-third-desktop">
+                    <figure class="image is-3by2">
+                        <img class="br-12" src="https://bulma.io/images/placeholders/256x256.png" alt="Wirklink">
+                        <figcaption>
+                            <h1 class="title is-5 is-size-4-widescreen has-text-white">Coming Soon</h1>
+                            <!-- <a class="button is-primary is-rounded is-outlined">Visit site</a> -->
+                        </figcaption>
+                      </figure>
                 </div>
 
             </div>
-
         </section>
+        <!--#endregion-->
 
-        <section id="about">
-
-            <div class="education">
-
-                <div class="education__content" data-aos="zoom-in" data-aos-duration="2000">
-                    <span class="fa-stack icon icon--large">
-                        <i class="fas fa-graduation-cap fa-stack-1x"></i>
-                        <i class="far fa-circle fa-stack-2x"></i>
-                    </span>
-                    <dl>
-                        <dt class="education__title">BEng Software Engineering</dt>
-                        <dd class="education__institution">University of Westminster</dd>
-                        <dd class="education__year">2020 - Present</dd>
-                    </dl>
-                </div>
-                <div class="education__content" data-aos="zoom-in" data-aos-duration="2000">
-                    <span class="fa-stack icon icon--large">
-                        <i class="fas fa-graduation-cap fa-stack-1x"></i>
-                        <i class="far fa-circle fa-stack-2x"></i>
-                    </span>
-
-                    <dl>
-                        <dt class="education__title">Certificate in Software Engineering</dt>
-                        <dd class="education__institution">National Institute of Business Management</dd>
-                        <dd class="education__year">2020 Feb - 2020 Aug</dd>
-                    </dl>
-                </div>
-                <div class="education__content" data-aos="zoom-in" data-aos-duration="2000">
-                    <span class="fa-stack icon icon--large">
-                        <i class="fas fa-graduation-cap fa-stack-1x"></i>
-                        <i class="far fa-circle fa-stack-2x"></i>
-                    </span>
-
-                    <dl>
-                        <dt class="education__title">Primary Education</dt>
-                        <dd class="education__institution">Royal College Colombo</dd>
-                        <dd class="education__year">2006 - 2019</dd>
-                    </dl>
-                </div>
-            </div>
-
-            <div class="career">
-
-                <div class="career__content" data-aos="zoom-in" data-aos-duration="2000">
-                    <span class="fa-stack icon icon--large">
-                        <i class="fas fa-briefcase fa-stack-1x"></i>
-                        <i class="far fa-circle fa-stack-2x"></i>
-                    </span>
-
-                    <dl>
-                        <dt class="career__title">MobiOs Pvt. Ltd.</dt>
-                        <dd class="career__role">Intern - Software Engineer</dd>
-                        <dd class="career__year">2020 Feb - 2020 Sep</dd>
-                    </dl>
-                </div>
+        <!-- #region Skills -->
+        <section class="section is-primary">
             
-            </div>
+            <h1 class="title has-text-centered pt-6 pb-5 has-text-weight-bold">My Skills</h1>
+            <p class="subtitle has-text-centered pb-6">I'm always learning new skills and trying out new frameworks. 
+                These are the skills I currently have.</p>
 
-            <div class="skills">
-                <h1 class="skills__title">Skills</h1>
-                <p class="skills__content">
-                        HTML5, CSS3, JavaScript 
-                    <br>Spring Boot, MySQL 
-                    <br>Java, C#, Python
-                </p>
-            </div>
+            <div class="box container br-12">
 
-        </section>
+                <div class="columns is-centered">
+                    <div class="column is-bordered-bottom-right">
+                        <i class="fas fa-code fa-3x is-centered py-6 has-text-primary-dark"></i>
 
-        <section id="contact">
+                        <h1 class="title has-text-centered is-5 is-spaced has-text-weight-bold">Frontend Development</h1>
+                        <div class="block">
+                            <p class="subtitle is-6 has-text-centered has-text-primary-dark has-text-weight-bold">Languages & Frameworks</p>
+                            <p class="has-text-centered">HTML</p>
+                            <p class="has-text-centered">CSS</p>
+                            <p class="has-text-centered">JavaScript</p>
+                            <p class="has-text-centered">Bulma</p>
+                        </div>
 
-            <div class="contact">
-                <h1 class="contact__email"><a href="mailto:hishambawa@icloud.com">hishambawa@icloud.com</a></h1>
+                        <div class="block">
+                            <p class="subtitle is-6 has-text-centered has-text-primary-dark has-text-weight-bold">Things I'm Learning</p>
+                            <p class="has-text-centered">Flutter</p>
+                            <p class="has-text-centered">React</p>
+                        </div>
 
-                <div class="contact__links">
-                    <a href="https://www.facebook.com/hisham.bawa.71" target="_blank" rel="noopener" aria-label="Facebook Profile"><i class="fab fa-facebook icon icon--medium icon--row contact__link"></i></a>
-                    <a href="https://www.instagram.com/hishambawa" target="_blank" rel="noopener" aria-label="Instagram Profile"><i class="fab fa-instagram icon icon--medium icon--row contact__link"></i></a>
-                    <a href="https://www.linkedin.com/in/hishambawa" target="_blank" rel="noopener" aria-label="Linkedin Profile"><i class="fab fa-linkedin-in icon icon--medium icon--row contact__link"></i></a>
+                    </div>
+                    <div class="column">
+                        <i class="fas fa-laptop-code fa-3x is-centered py-6 has-text-primary-dark"></i>
+
+                        <div class="block">
+                            <h1 class="title has-text-centered is-5 is-spaced">Backend Development</h1>
+                            <p class="subtitle is-6 has-text-centered has-text-primary-dark has-text-weight-bold">Languages & Frameworks</p>
+                            <p class="has-text-centered">Java</p>
+                            <p class="has-text-centered">C#</p>
+                            <p class="has-text-centered">Python</p>
+                            <p class="has-text-centered">MySQL</p>
+                            <p class="has-text-centered">Spring Boot</p>
+                        </div>
+
+                        <div class="block">
+                            <p class="subtitle is-6 has-text-centered has-text-primary-dark has-text-weight-bold">Things I'm Learning</p>
+                            <p class="has-text-centered">Node.js</p>
+                        </div>
+                    </div>
                 </div>
+                
             </div>
 
         </section>
+        <!-- #endregion -->
 
+        <!-- #region Contact -->
+        <section class="section is-large has-text-centered" id="contact">
+            <h1 class="title">Interested in working together?</h1>
+            <p class="subtitle">I'm always happy to take on new projects</p>
+
+            <a class="button is-outlined is-rounded is-medium is-primary is-dark my-6" href="mailto:hishambawa@icloud.com">Lets talk</a>
+
+            <div class="social buttons is-centered">
+                <a class="button is-primary is-outlined" href="https://www.facebook.com/hisham.bawa.71" target="_blank" rel="noopener" aria-label="Facebook Profile">
+                    <span class="icon is-small"><i class="fab fa-facebook-f"></i></span>
+                </a>
+                <a class="button is-primary is-outlined" href="https://www.instagram.com/hishambawa" target="_blank" rel="noopener" aria-label="Instagram Profile">
+                    <span class="icon is-small"><i class="fab fa-instagram"></i></span>
+                </a>
+                <a class="button is-primary is-outlined" href="https://www.linkedin.com/in/hishambawa" target="_blank" rel="noopener" aria-label="Linkedin Profile">
+                    <span class="icon is-small"><i class="fab fa-linkedin-in"></i></span>
+                </a>
+            </div>
+        </section>
+        <!-- #endregion -->
+        
     </main>
 
     <footer class="footer">
-        <hr class="footer__divider">
-        <p class="footer__developer">Made with <i class="fas fa-heart icon"></i> by Hisham Bawa</p>
+        <div class="content has-text-centered has-text-weight-light is-family-monospace">
+            <p class="is-size-7">Handcrafted by Me 
+                <br> 
+                <small>2022</small>
+                </p>
+            <a href="https://bulma.io">
+                <img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+              </a>
+        </div>
     </footer>
-
-    <div class="top" id="top">
-        <a href="#" onclick="smoothScroll(0)" aria-label="Back to Top"><i class="fas fa-arrow-up icon icon--medium top__icon"></i></a>
-    </div>
-
-    <div class="not-supported" id="incompatible">
-        <h1 class="not-supported__title">Your browser is not supported</h1>
-        <p>Please use one of the following browsers below or <a href="#" id="edge-url">click here</a> to open this site on Microsoft Edge</p>
-
-        <span class="not-supported__icons">
-            <i class="fab fa-chrome icon--not-supported icon--large icon--row"></i>
-            <i class="fab fa-safari icon--not-supported icon--large icon--row"></i>
-            <i class="fab fa-edge icon--not-supported icon--large icon--row"></i>
-            <i class="fab fa-firefox-browser icon--not-supported icon--large icon--row"></i>
-        </span>
-    </div>
 
 </body>
 </html>
