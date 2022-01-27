@@ -107,3 +107,7 @@ figcaption a {
 html {
     scroll-behavior: smooth;
 }
+
+.footer.is-primary {
+    background-color: #40e0d0;
+}
