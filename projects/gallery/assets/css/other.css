@@ -14,6 +14,11 @@
     border-radius: 100% !important;
 }
 
+.footer.is-primary {
+    color: #EFF0EB;
+    background-color: #8A4D76;
+}
+
 @media screen and (min-width: 769px){
     .is-bordered-bottom-right {
         border-right: 1px solid #ddd;
