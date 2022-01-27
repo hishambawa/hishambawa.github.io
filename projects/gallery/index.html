@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Gallery | Home</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="stylesheet" href="assets/css/bulma-carousel.min.css">
+	<link rel="stylesheet" href="assets/css/other.css">
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="assets/js/script.js"></script>
+	
+</head>
+
+<body>
+	<nav class="navbar is-primary is-spaced">
+		<div class="navbar-brand">
+			<a class="navbar-item">LOGO</a>
+
+			<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			  </a>
+		</div>
+
+		<div class="navbar-menu">
+			<div class="navbar-end">
+				<a href="#" class="navbar-item">Home</a>
+				<a href="#" class="navbar-item">Gallery</a>
+				<a href="#" class="navbar-item">About</a>
+				<a href="#" class="navbar-item">Contact</a>
+			</div>
+		</div>
+	</nav>
+
+	<main>
+		<!-- #region Landing -->
+		<section class="hero is-fullheight">
+			<div class="hero-body">
+				<div class="columns is-align-items-center">
+					<div class="column is-half">
+						<h1 class="title is-size-1-desktop is-spaced">Discover</h1>
+						<p class="subtitle is-size-4-desktop">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit amet officiis corporis neque sed, in tempore voluptatem ea iste assumenda eligendi praesentium sapiente, dolorem at suscipit perspiciatis atque laudantium perferendis</p>
+					</div>
+					<div class="column is-half">
+						<figure class="image is-3by4 is-hidden-mobile">
+							<img src="assets/images/landing.jpg" alt="Landing page image">
+						</figure>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- #endregion -->
+
+		<!-- #region Services -->
+		<section class="hero is-primary is-medium">
+			<div class="hero-body">
+				<h1 class="title has-text-centered">Our Services</h1>
+
+				<div class="box container br-12">
+					<div class="columns is-multiline is-centered has-text-centered has-text-primary">
+
+						<div class="column is-bordered-bottom-right p-6">
+							<span class="icon py-6"><i class="fas fa-pencil-ruler fa-3x"></i></span>
+							<h1 class="title has-text-black py-5">Design</h1>
+							<p class="has-text-dark">Lorem ipsum dolor sit amet, consecte adipisicing elit. Deserunt odit illumast possimus itaque blanditiis officiis debitis placeat.</p>
+						</div>
+
+						<div class="column is-bordered-bottom-right p-6">
+							<span class="icon py-6"><i class="fas fa-hammer fa-3x"></i></span>
+							<h1 class="title has-text-black py-5">Build</h1>
+							<p class="has-text-dark">Lorem ipsum dolor sit amet, consecte adipisicing elit. Deserunt odit illumast possimus itaque blanditiis officiis debitis placeat.</p>
+						</div>
+
+						<div class="column p-6">
+							<span class="icon py-6"><i class="fas fa-truck-moving fa-3x"></i></span>
+							<h1 class="title has-text-black py-5">Move</h1>
+							<p class="has-text-dark">Lorem ipsum dolor sit amet, consecte adipisicing elit. Deserunt odit illumast possimus itaque blanditiis officiis debitis placeat.</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- #endregion -->
+
+		<!-- #region Work -->
+		<div class="section has-carousel">
+
+			<div class="has-text-centered" style="overflow: hidden; ">
+
+				<h1 class="title pt-6">Our Work</h1>
+				<p class="subtitle pb-6">These are some of the work we did recently. 
+				 More can be found in the <a href="#">gallery.</a>
+				</p>
+
+				<div id="carousel-demo" class="hero-carousel">
+					<div class="item-1">
+						<figure class="image is-4by3">
+							<img src="assets/images/gallery-1.jpg" alt="Gallery image">
+						</figure>
+					</div>
+					<div class="item-2">
+						<figure class="image is-4by3">
+							<img src="assets/images/gallery-2.jpg" alt="Gallery image">
+						</figure>
+					</div>
+					<div class="item-3">
+						<figure class="image is-4by3">
+							<img src="assets/images/gallery-3.jpg" alt="Gallery image">
+						</figure>
+					</div>
+					<div class="item-4">
+						<figure class="image is-4by3">
+							<img src="assets/images/gallery-4.jpg" alt="Gallery image">
+						</figure>
+					</div>
+				
+				</div>
+
+			</div>
+			
+		</div>
+		<!-- #endregion -->
+
+		<!-- #region Contact -->
+		<section class="section is-medium has-text-centered">
+			<h1 class="title">Got any questions for us?</h1>
+			<a class="button is-primary is-outlined is-rounded my-6" href="#">Lets Talk</a>
+
+			<div class="social buttons is-centered">
+                <a class="button is-primary is-outlined" href="https://www.facebook.com/hisham.bawa.71" target="_blank" rel="noopener" aria-label="Facebook Profile">
+                    <span class="icon is-small"><i class="fab fa-facebook-f"></i></span>
+                </a>
+                <a class="button is-primary is-outlined" href="https://www.instagram.com/hishambawa" target="_blank" rel="noopener" aria-label="Instagram Profile">
+                    <span class="icon is-small"><i class="fab fa-instagram"></i></span>
+                </a>
+                <a class="button is-primary is-outlined" href="https://www.linkedin.com/in/hishambawa" target="_blank" rel="noopener" aria-label="Linkedin Profile">
+                    <span class="icon is-small"><i class="fab fa-linkedin-in"></i></span>
+                </a>
+            </div>
+		</section>
+		<!-- #endregion -->
+	</main>
+
+	<footer class="footer">
+        <div class="content has-text-centered has-text-weight-light is-family-monospace">
+            <p class="is-size-7">Handcrafted by
+				<a href="https:www.hishambawa.com" target="_blank">Hisham Bawa</a> 
+                <br> 
+                <small>2022</small>
+                </p>
+            <a href="https://bulma.io">
+                <img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+              </a>
+        </div>
+    </footer>
+
+	<script src="assets/js/bulma-carousel.min.js"></script>
+	<script>
+		bulmaCarousel.attach('#carousel-demo', {
+			infinite: true,
+			autoplay: true,
+			autoplayspeed: 2000,
+			slidesToScroll: 1,
+			slidesToShow: 3,
+			breakpoints:
+			[
+				{ 
+					changePoint: 480, slidesToShow: 1, slidesToScroll: 1
+				}, 
+				{ 
+					changePoint: 640, slidesToShow: 2, slidesToScroll: 1
+				}
+			]
+		});
+	</script>
+</body>
+
+</html>

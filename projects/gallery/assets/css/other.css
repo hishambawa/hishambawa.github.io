@@ -1,0 +1,22 @@
+.is-bordered-bottom-right {
+    border-bottom: 1px solid #ddd;
+}
+
+.br-12 {
+    border-radius: 12px;
+}
+
+.slider-item img {
+    object-fit: cover;
+}
+
+.social .button {
+    border-radius: 100% !important;
+}
+
+@media screen and (min-width: 769px){
+    .is-bordered-bottom-right {
+        border-right: 1px solid #ddd;
+        border-bottom: none;
+    }
+}
