@@ -1,7 +1,3 @@
-.navbar .navbar-menu {
-    text-align: center;
-}
-
 .is-bordered-bottom-right {
     border-bottom: 1px solid #ddd;
 }
@@ -100,12 +96,9 @@ figcaption a {
     font-weight: 600;
 }
 
-.navbar img {
-    max-height: 3rem;
-}
-
 html {
     scroll-behavior: smooth;
+    
 }
 
 .footer.is-primary {
