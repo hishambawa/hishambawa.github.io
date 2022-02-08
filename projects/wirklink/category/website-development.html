@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="Looking for a someone to help build your website? Wirklink will connect you with a variety of Website Developers in Sri Lanka and help you find the right pick.">
+
+		<title>WirkLink | Website Developers in Sri Lanka</title>
+
+		<!-- #region Stylesheets -->
+		<link rel="stylesheet" href="../assets/css/main.css">
+		<link rel="stylesheet" href="../assets/css/layout.css">
+		<link rel="stylesheet" href="../assets/css/services.css">
+		<link rel="stylesheet" href="../assets/css/signup.css">
+        <link rel="stylesheet" href="../assets/css/login.css">
+		<!-- #endregion -->
+
+		<!-- #region Scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://kit.fontawesome.com/b9d1542fd1.js" crossorigin="anonymous"></script>
+		<script src="../assets/js/load.js"></script>
+		<script src="../assets/js/common.js" defer></script>
+		<script src="../assets/js/categories.js"></script>
+		<script src="../assets/js/services.js" defer></script>
+		<script src="../assets/js/login.js" defer></script>
+		<script src="../assets/js/signup.js" defer></script>
+		<!-- #endregion -->
+
+	</head>
+
+	<body onload="loadServices('website-development')">
+
+		<div class="page-container" id="container">
+
+			<!-- #region Navbar -->
+
+			<header id="navbar"></header>
+
+			<!-- #endregion -->
+
+			<!-- #region Content -->
+
+			<main id="content">
+
+				<button class="mobile-only" id="category-btn" onclick="showSidebar(1)"><i class="fas fa-sliders-h" style="padding-right: 10px;"></i>Categories</button>
+
+				<div id="category-container">
+					<span><i class="fas fa-sliders-h" style="padding-right: 10px;"></i>Categories</span>
+					<span class="mobile-only" id="category-close-btn" onclick="showSidebar(0)">X</span>
+
+					<div id="category-container-body">
+						<ul id="categories"></ul>
+					</div>
+	
+				</div>
+
+				<div id="service-category" style="width: 100%;">
+					<h1 id="service-category-title">Website Development</h1>
+				</div>
+
+				<div id="services-empty"><p>Stay tuned for more Service Providers</p></div>
+			</main>
+
+			<!-- #endregion -->
+
+			<!-- #region Footer -->
+
+			<footer id="footer" class="footer-distributed"></footer>
+
+			<!-- #endregion -->
+
+			<!-- #region Loaders -->
+
+			<div class="loading-screen">
+                <p>Please Wait</p>
+    
+                <div class="loader">
+                    <svg class="circular-loader"viewBox="25 25 50 50" >
+                    <circle class="loader-path" cx="50" cy="50" r="20" fill="none" stroke="#70c542" stroke-width="2" />
+                    </svg>
+                </div>
+            </div>
+
+            <div id="loaders"></div>
+
+            <!-- #endregion -->
+		</div>
+
+	</body>
+
+</html>

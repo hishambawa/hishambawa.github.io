@@ -1,0 +1,319 @@
+.page-container {
+    background: linear-gradient(#fefefe, #eee);
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "user button"
+        "panel link";
+    padding: 0 20px 5% 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    min-height: 750px;
+}
+
+.dashboard-active{
+    display: block !important;
+    grid-area: panel;
+}
+
+#user {
+    grid-area: user;
+    margin: 10px;
+    align-self: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.dashboard-title{
+    padding: 25px;
+    background-color: #fbfbfb;
+    margin: 0;
+}
+
+.ad-btn-container {
+    grid-area: button;
+    margin: 10px;
+    align-self: center;
+    justify-self: center;
+}
+
+#post-ad-btn {
+    margin: 10px;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    background-color: #103386;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+}
+
+#post-ad-btn:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.dashboard-buttons{
+    background-color: #103386;
+    color: #fff;
+    border-radius: 25px;
+    padding: 5px 10px;
+}
+
+.dashboard-buttons:hover{
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+.delete-btn{
+    background-color: #c13434;
+    margin-left: 10px;
+}
+
+/* #region Dashboard Links */
+.dashboard-links{
+    grid-area: link;
+    box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 2px 6px 2px;
+    background-color: #fff;
+    margin: 10px;
+    min-width: 300px;
+}
+
+.dashboard-links li{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+    font-size: 1rem;
+}
+
+.dashboard-links li:hover{
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #ddd;
+}
+
+#pending-request-count, #ongoing-request-count{
+    border-radius: 100%; 
+    background-color: #103386; 
+    width: 20px; 
+    color: white; 
+    text-align: center; 
+    float: right;
+}
+/* #endregion */
+
+.dashboard-container{
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    display: none;
+}
+
+.dashboard-card {
+    border-top: 1px solid #dddddd;
+    padding: 25px;
+}
+
+/* #region Pending Requests */
+
+.more-btn {
+    float: right;
+}
+
+/* #endregion */
+
+/* #region Ongoing Jobs */
+
+.complete-btn {
+    margin-left: 15px;
+    border-radius: 5px;
+}
+
+.cancel-btn {
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+/* #endregion */
+
+/* #region Post Ad Modal */
+
+.container {
+    border-radius: 15px;
+    background-color: #fff;
+    padding: 20px;
+    width: 700px;
+    margin: 100px auto;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 15%);
+}
+
+label {
+    color: black;
+}
+
+h3 {
+    text-align: center;
+    font-size: 20px;
+}
+
+.image-label{
+    position: relative;
+    width: 100px; 
+    height: 100px; 
+    background-color: #f3f6f5;
+    display: inline-block;
+}
+
+.delete-image{
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 0;
+    z-index: 1;
+    border-radius: 100%;
+    background-color: #FFF;
+    text-align: center;
+    padding: 0;
+}
+
+.image-preview{
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-height: 100px;
+}
+
+.post-ad-btn-container{
+    margin: 50px auto;
+    width: 50%;
+}
+
+.post-ad-btn-set{
+    width: calc(50% - 5px);
+    background-color: #103386;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+/* #endregion */
+
+/* #region Pending Requests Modal */
+
+#pending-request-container{
+    background-color: #FFF;
+    height: 100px;
+    filter: none !important;
+}
+
+.pending-request-buttons{
+    margin: 0 auto;
+    width: max-content;
+}
+
+.pending-request-buttons button{
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin: 10px;
+}
+
+.pending-request-buttons button:hover{
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+/* #endregion */
+
+/* #region Account Review Modal */
+
+#review-modal-content{
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 150px auto;
+    z-index: 1;
+    border-radius: 25px;
+}
+
+#review-modal-title{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+#review-modal-content img{
+    display: block;
+    margin: 0 auto;
+}
+
+/* #endregion */
+
+@media (max-width: 900px) {
+    .container {
+        min-width: 0px;
+        margin: 0;
+        width: auto;
+        box-shadow: none;
+    }
+
+    #content {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "user"
+            "button"
+            "link"
+            "panel";
+        padding: 10px;
+        width: 100%;
+    }
+
+    .dashboard-links{
+        min-width: 0px;
+    }
+
+    .decide-btn {
+        position: relative;
+        top: 5%;
+    }
+
+    .complete-btn {
+        width: 30%;
+        margin-left: 15px;
+        font-size: larger;
+    }
+    .cancel-btn {
+        width: 30%;
+        margin-right: 15px;
+        font-size: larger;
+    }
+
+    .post-ad-btn-container{
+        width: 75%;
+    }
+
+    #review-modal-content img{
+        width: 100%;
+    }
+}
+
+@media(max-width: 470px){
+    #review-modal-title{
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 400px){
+    .post-ad-btn-container{
+        width: 100%;
+    }
+}

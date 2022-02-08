@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      
+        <title>WirkLink | Reset Password</title>
+
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/layout.css">
+        <link rel="stylesheet" href="assets/css/signup.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body>
+
+        <form id="reset-form" style="max-width: 200px; margin: auto; position: absolute; 
+                  top: 0; bottom: 0; right: 0; left: 0; max-height: 200px;">
+
+            <input style="margin: 10px 0;" id="password" type="password" placeholder="Enter new password" required>
+            <input style="margin: 10px 0;" id="password-repeat" type="password" placeholder="Repeat password" required>
+
+            <button style="margin: 10px 0; width: 100%; padding: 10px 15px;" type="submit">Submit</button>
+        </form>
+
+        <!-- #region Loaders -->
+
+        <div class="loading-screen">
+            <p>Please Wait</p>
+
+            <div class="loader">
+                <svg class="circular-loader"viewBox="25 25 50 50" >
+                    <circle class="loader-path" cx="50" cy="50" r="20" fill="none" stroke="#70c542" stroke-width="2" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="success-animation">
+            <p>Success</p>
+            <svg class="animation-icons checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" /><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /></svg>
+        </div>
+
+        <div class="error-animation">
+            <p id="error-message">Email is already in use</p>
+            <svg class="animation-icons error-icon"  viewBox="0 0 87 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Group-2" transform="translate(2.000000, 2.000000)">
+                        <circle id="Oval-2" stroke="rgba(252, 191, 191, .5)" stroke-width="4" cx="41.5" cy="41.5" r="41.5"></circle>
+                        <circle  class="ui-error-circle" stroke="#F74444" stroke-width="4" cx="41.5" cy="41.5" r="41.5"></circle>
+                        <path class="ui-error-line1" d="M22.244224,22 L60.4279902,60.1837662" id="Line" stroke="#F74444" stroke-width="3" stroke-linecap="square"></path>
+                        <path class="ui-error-line2" d="M60.755776,21 L23.244224,59.8443492" id="Line" stroke="#F74444" stroke-width="3" stroke-linecap="square"></path>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <!-- #endregion -->
+
+        <script>
+
+            document.getElementById("reset-form").addEventListener("submit", function(e){
+                e.preventDefault();
+                
+                let token = new URL(document.location).searchParams.get("token");
+
+                let password = document.getElementById("password");
+                let passwordRepeat = document.getElementById("password-repeat");
+
+                let passwordData = 
+                {
+                    password: password.value,
+                    token: token
+                }
+
+                if(password.value != passwordRepeat.value){
+                    alert("Passwords dont match");
+                }
+
+                else{
+                    $.ajax({
+                        type: "PUT",
+                        url: "https://api.wirklink.com/api/reset",
+                        headers:
+                        {
+                            "Content-Type": "application/json"
+                        },
+                        data: JSON.stringify(passwordData),
+                        success:function(response){
+                            if(response.status == 1){
+                                $(".success-animation").css("display", "block");
+                                setTimeout(function(){
+                                    $(".success-animation").css("display", "none"); 
+                                    window.location.href = "index.html";
+                                }, 3000);
+                            }
+                            else {
+                                $(".error-animation").css("display", "block");
+                                $("#error-message").text("Invalid token");
+
+                                setTimeout(function(){
+                                    $(".error-animation").css("display", "none"); 
+                                    window.location.href = "index.html";
+                                }, 3000);
+                            }
+                        },
+                        error: function(error){
+                            $(".error-animation").css("display", "block");
+                            $("#error-message").text("Error");
+
+                            setTimeout(function(){
+                                $(".error-animation").css("display", "none"); 
+                                window.location.href = "index.html";
+                            }, 3000);
+                        }
+                    })
+                }
+            });
+
+        </script>
+    </body>
+</html>

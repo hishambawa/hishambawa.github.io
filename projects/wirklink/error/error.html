@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Wirklink | Error</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <style>
+    
+        html, body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .img{
+            height: 100%;
+            color: #000;
+            font-family: 'Raleway', sans-serif;
+        }
+        
+        .error{
+            width: fit-content;
+            max-width: 1200px;
+            position: relative;
+            top:20%;
+            margin: 0 auto;
+            font-size: 8rem;
+        }
+        .message{
+            position: relative;
+            top:25%;
+            width: fit-content;
+            max-width: 1200px;
+            margin: 0 auto;
+            font-size: 3rem;
+        }
+
+        .btn{
+            width: fit-content;
+            max-width: 1200px;
+            position: relative;
+            top: 30%;
+            margin: 0 auto;  
+        }
+
+        .btn button{
+            border: none;
+            border-radius: 25px;
+            background-color: #103386;
+            color: #fff;
+        }
+
+        .btn a{
+            display: block;
+            padding: 10px 20px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .btn button:hover{
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+    
+        @media(max-width: 700px){
+            .error{
+                width: 100%;
+                text-align: center;
+                font-size: 4rem;
+            }
+
+            .message{
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+
+    <script>localStorage.clear()</script>
+</head>
+<body>
+    <div class="img">
+        <div class="error">OOPS</div>
+        <div class="message">Something went wrong</div>
+        <div class="btn"><button><a href="/index.html">Go to homepage</a></button></div>
+    </div>
+</body>
+</html>

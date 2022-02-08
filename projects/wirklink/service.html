@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="Wirklink will connect you with a variety of service providers in Sri Lanka and help you find the right pick">
+
+		<title>WirkLink | Service</title>
+
+		<!-- #region Stylesheets -->
+		<link rel="stylesheet" href="assets/css/main.css">
+		<link rel="stylesheet" href="assets/css/layout.css">
+		<link rel="stylesheet" href="assets/css/service.css">
+		<link rel="stylesheet" href="assets/css/signup.css">
+        <link rel="stylesheet" href="assets/css/login.css">
+		<!-- #endregion -->
+
+		<!-- #region Scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/b9d1542fd1.js" crossorigin="anonymous"></script>
+        <script src="assets/js/load.js"></script>
+		<script src="assets/js/common.js" defer></script>
+		<script src="assets/js/service.js" defer></script>
+		<script src="assets/js/login.js" defer></script>
+		<script src="assets/js/signup.js" defer></script>
+		<!-- #endregion -->
+
+	</head>
+
+	<body>
+
+		<div class="page-container" id="container">
+
+			<!-- #region Navbar -->
+
+			<header id="navbar"></header>
+
+			<!-- #endregion -->
+
+			<!-- #region Content -->
+
+			<main id="content">
+
+                <section id="service-content">
+
+                    <div id="service-image-container">
+                        <button class="service-image-btn btn-left" onclick="previousImage()">❮</button>
+                        <button class="service-image-btn btn-right" onclick="nextImage()">❯</button>
+
+                        <div id="service-images"></div>
+                        <div id="service-image-dots"></div>
+                    </div>
+
+                </section>
+
+                <section id="service-details">
+
+                    <div id="service-provider">
+                        <h2 id="service-provider-name"></h2>
+                    </div> 
+
+                    <div id="request-btn-container">
+                        <button id="request-quote-btn">Request a Quote</button>
+                    </div>
+                </section>
+			</main>
+
+			<!-- #endregion -->
+
+            <!-- #region Service Request Modal -->
+
+            <div id="request-modal">
+
+                <form class="quote-container" id="request-form">
+                    <span id="close-modal-request">X</span>
+                    <h2>Request for service</h2>
+                    <p>Please fill in this form to request a quote from the service provider.</p>
+                    <hr>
+            
+                    <div class="field">
+            
+                        <div class="field-half">
+                            <label for="fname">First name</label>
+                            <input type="text" placeholder="First Name" id="fname" name="firstName" required>
+                        </div>
+            
+                        <div class="field-half">
+                            <label for="lname">Last name</label>
+                            <input type="text" placeholder="Last Name" id="lname" name="lastName" required>
+                        </div>
+            
+                        <div class="field-half">
+                            <label for="email">Email</label>
+                            <input type="email" placeholder="Email" id="quote-email" name="email" required>
+                        </div>
+            
+                        <div class="field-half">
+                            <label for="contact">Contact No</label>
+                            <input type="tel" pattern="\d{10}" placeholder="Contact No" id="contact" name="contactNumber" maxlength="10" required>
+                        </div>
+            
+                        <div class="field-half">
+                            <label for="city-quote">City</label>
+                            <input type="text" placeholder="Location" name="location" id="city-quote" required>
+                        </div>
+            
+                        <div class="field-full">
+                            <label for="message">Description</label>
+                            <textarea id="message" name="description" maxlength="2000" placeholder="Your message here (2000 characters max)" style="height:200px" required></textarea>
+                        </div>
+                        
+                    </div>
+            
+                    <div class="quote-btn">
+                        <button type="submit" class="getquote">Get Quote</button>
+                        <button type="reset" id="cancel-request-btn" class="cancelbtn">Cancel</button>
+                    </div>
+            
+                </form>
+
+            </div>
+
+            <!-- #endregion -->
+
+			<!-- #region Footer -->
+
+			<footer id="footer" class="footer-distributed"></footer>
+
+			<!-- #endregion -->
+
+            <!-- #region Modals -->
+
+            <div id="modals"></div>
+            
+            <!-- #endregion -->
+
+            <!-- #region Loaders -->
+
+            <div class="loading-screen">
+                <p>Please Wait</p>
+    
+                <div class="loader">
+                    <svg class="circular-loader"viewBox="25 25 50 50" >
+                    <circle class="loader-path" cx="50" cy="50" r="20" fill="none" stroke="#70c542" stroke-width="2" />
+                    </svg>
+                </div>
+            </div>
+
+            <div id="loaders"></div>
+
+            <!-- #endregion -->
+
+		</div>
+
+	</body>
+
+</html>

@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="Do you have a creative mind? Use your creativity to earn some extra cash.">
+
+        <title>Wirklink | Competitions</title>
+
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/competition.css">
+        <link rel="stylesheet" href="assets/css/signup.css">
+        <link rel="stylesheet" href="assets/css/login.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/b9d1542fd1.js" crossorigin="anonymous"></script>
+        <script defer src="assets/js/common.js"></script>
+        <script defer src="assets/js/competitions.js"></script>
+        <script src="assets/js/signup.js"></script>
+        <script src="assets/js/login.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y83L776CDJ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-Y83L776CDJ');
+        </script>
+
+    </head>
+    <body>
+        <div class="page-container" id="container">
+
+            <header id="navbar"></header>
+            
+            <main id="content">
+              
+                <div class="competitions">
+                    <div class="competition-container" id="card">
+                        
+                        <div class="flip-card-inner" id="flip1">
+                            <div class="flip-card-front">
+                                <div class="front-info">
+                                    <h1 style="font-size: 1.5rem;">Name for a Shoe Brand</h1>
+                                    <h2><i class="fas fa-trophy" style="color: rgb(211, 180, 9);"></i> 1st Place - Rs. 1000</h2>
+                                    <h3>Runner-ups - Rs. 500</h3>
+                                    <h3><i class="fas fa-check-circle" style="padding-right: 5px; color: green;"></i>Guaranteed price</h3>
+                                    <button class="more-btn" onclick="flip(1)">More</button>
+                                    <div class=floating-div>
+                                        <h3 class="entry"><i class="fas fa-user" style="padding-right: 5px;"></i><span id="wlc-count">0 Entries</span></h3>
+                                        <h3 class="days" id="timer"></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="back-info">
+                                    <h2>About the Company</h2>
+                                    <p>
+                                        We are a startup in Sri Lanka and we're into manufacturing shoes. We need a new brand name for our shoes. Our shoes are environment friendly as we use sustainable raw materials. The brand name should reflect the sustainability aspect of the shoe.
+                                    </p>
+                                </div>
+                                <div class="flip-back-buttons">
+                                    <button class="more-btn" onclick="flip(1)">Back</button>
+                                    <button  id="wlc1" class="more-btn" onclick="competitionForm(1)">Enter</button>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+
+                    <div class="rules">
+                        <h1>Competition Rules</h1>
+                        <ol>
+                            <li>Only one entry per competition</li>
+                            <li>Enter a valid email as it will be used to contact the winner</li>
+                            <li>The entry shouldn't be the name of an existing company</li>
+                            <li>Follow us on Facebook and Instagram to recieve the prize</li>
+                            <li>The winners will be selected from the top 3 most voted entries</li>
+                            <li>Minimum of 10 votes are required to be eligible for the prize</li>
+                        </ol>
+                    </div>
+
+                </div>
+
+                <div class="votes-container" id="votes">
+                    <h1>Vote</h1>
+                </div>
+        
+            </main>
+
+            <footer id="footer" class="footer-distributed"></footer>
+
+            <div id="competition-modal">
+                <form class="form-container" id="competition-form-modal">
+                    <span id="close-competition-form" class="modal-close">X</span>
+                    <h2>Submission</h2>
+                
+                    <label for="login-answer">Answer</label>
+                    <input type="text" placeholder="Enter your answer" id="competition-answer" required>
+
+                    <label for="login-password">Full name</label>
+                    <input type="text" placeholder="Enter your name" id="competition-name" required>
+
+                    <label for="login-email">Email</label>
+                    <input type="email" placeholder="Enter your email" id="competition-email" required>
+
+                    <button type="submit" id="competition-submit">Submit</button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- #region Modals -->
+
+        <div id="modals"></div>
+            
+        <!-- #endregion -->
+
+        <!-- #region Loaders -->
+        <div class="loading-screen">
+            <p>Please Wait</p>
+
+            <div class="loader">
+                <svg class="circular-loader" viewBox="25 25 50 50">
+                <circle class="loader-path" cx="50" cy="50" r="20" fill="none" stroke="#70c542" stroke-width="2" />
+                </svg>
+            </div>
+        </div>
+
+        <div id="competition-success" class="success-animation">
+            <p>Your response was recorded</p>
+            <p style="font-size: 1.5rem;">The winner will be announced on Instagram</p>
+            <svg class="animation-icons checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" /><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /></svg>
+        </div>
+
+        <div id="loaders"></div>
+        <!-- #endregion -->
+    
+    </body>
+</html>

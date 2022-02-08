@@ -1,0 +1,26 @@
+.error-edit-profile{
+    margin: 25px;
+    display: none;
+    align-items: center;
+}
+
+.button button{
+    width: calc(50% - 5px) !important;
+}
+
+@media(max-width:900px){
+    .user-details{
+        grid-template-columns: 1fr;
+    }
+
+    .input-box{
+        grid-column: span 1 !important;
+    }
+}
+
+@media(max-width:500px){
+    .button button{
+        width: 100% !important;
+        margin: 10px;
+    }
+}

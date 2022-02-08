@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Chewy&display=swap");
+
+#navbar {
+    background-color: #f1f1f1;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content max-content;
+    grid-template-areas:
+        "landing"
+        "divider"
+        "steps"
+        "join-us-divider"
+        "join-us";
+}
+
+#landing-message {
+    grid-area: landing;
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+    position: relative;
+    background-color: #f1f1f1;
+    font-size: 4rem;
+}
+
+#landing-image {
+    width: 100%;
+    height: auto;
+    grid-area: landing;
+    max-width: 1920px;
+}
+
+#landing-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translate(0%, -75%);
+}
+
+#landing-txt{
+    margin: 0;
+    font-size: 4rem;
+}
+
+#landing-message button {
+    font-size: 2rem;
+    background-color: #103386;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    transition: 4s opacity;
+    opacity: 0;
+}
+
+#landing-message a {
+    display: block;
+    padding: 10px 20px;
+}
+
+#landing-message button:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* #region Join Us */
+#join-us-container {
+    grid-area: join-us;
+    background-color: #ecf3f7;
+    padding: 20px;
+}
+
+#join-us-content {
+    display: flex;
+    align-items: flex-start;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 25px;
+    max-width: 1920px;
+    margin: 10px auto;
+    padding: 50px 0 0 0;
+}
+
+#join-us-text {
+    width: 50%;
+    height: 100%;
+    padding: 50px;
+    font-family: "Raleway", sans-serif;
+    text-align: justify;
+}
+
+#join-us p {
+    margin: 25% 0;
+}
+
+#join-us-line-1 {
+    margin: 0;
+    letter-spacing: 3px;
+    font-size: 1.5rem;
+}
+
+#join-us-line-2 {
+    margin: 0;
+    font-size: 4rem;
+    letter-spacing: 6px;
+    font-family: "Chewy";
+    color: #103386;
+}
+
+#join-us-description {
+    margin: 50px 0;
+    font-size: 1.25rem;
+    color: #565656;
+    line-height: 32px;
+}
+
+#join-us-image-container{
+    display: block;
+    width: 50%;
+    height: auto;
+}
+
+#join-us-image {
+    width: 100%;
+    height: auto;
+}
+
+#join-us-image:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+}
+/* #endregion */
+
+/* #region Steps */
+#step-container{
+    background-color: #dde8fb;
+    font-family: 'Raleway', sans-serif;
+}
+
+#step-container h1{
+    text-align: center;
+    font-size: 2rem;
+}
+
+#steps {
+    grid-area: steps;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1920px;
+}
+
+#steps img {
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    padding-top: 25px;
+}
+
+.card {
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    margin: 20px;
+    border-radius: 25px;
+    width: calc((100% / 3) - 40px);
+}
+
+.card1 {
+    grid-area: card1;
+    background-color: bisque;
+}
+
+.card2 {
+    grid-area: card2;
+    background-color: pink;
+}
+.card3 {
+    grid-area: card3;
+    background-color: #aaf0c1;
+}
+.info {
+    text-align: center;
+}
+/* #endregion */
+
+#divider {
+    grid-area: divider;
+    height: 100px;
+    background: linear-gradient(180deg, #f1f1f1, #dde8fb);
+}
+
+#join-us-divider{
+    grid-area: join-us-divider;
+    height: 100px;
+    background: linear-gradient(180deg, #dde8fb, #ecf3f7);
+}
+
+@media (max-width: 900px) {
+    #landing-message {
+        font-size: 3rem;
+    }
+
+    #landing-text {
+        top: 35%;
+        transform: translate(0%, -35%);
+    }
+
+    #landing-message button {
+        font-size: 1.5rem;
+    }
+
+    #join-us-container {
+        padding: 20px 0;
+    }
+
+    #join-us-content {
+        flex-wrap: wrap-reverse;
+        max-width: calc(100% - 40px);
+    }
+
+    #join-us-text, #join-us-image-container {
+        width: 100%;
+        height: auto;
+    }
+
+    #join-us-line-1 {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    #join-us-line-2 {
+        font-size: 3.5rem;
+        text-align: center;
+    }
+
+    #join-us-description {
+        margin: 10px 0;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .card{
+        width: 60%;
+        margin: 20px auto;
+    }
+
+    #steps img{
+        width: 40%;
+    }
+}
+
+@media (max-width: 700px) {
+    #landing-txt {
+        font-size: 3rem;
+    }
+
+    #landing-message button{
+        font-size: 1rem;
+    }
+
+    .info p {
+        font-size: 1.25rem;
+        max-width: 100%;
+        font-family: "Raleway", sans-serif;
+        margin-top: 0;
+    }
+
+    .card{
+        width: 100%;
+        margin: 20px;
+    }
+}
+
+@media(max-width: 500px) {
+    
+    #landing-txt {
+        font-size: 2rem;
+    }
+}
+
+@media(max-width: 350px){
+    #landing-txt {
+        font-size: 1.5rem;
+    }
+
+    #step-container, #join-us-container{
+        max-width: 320px;
+    }
+
+    .card{
+        margin: 20px 5px;
+    }
+}

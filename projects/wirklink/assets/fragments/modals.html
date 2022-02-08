@@ -1,0 +1,145 @@
+<html>
+	<head></head>
+	<body>
+        <div id="signup-modal">
+            <div class="signup-container">
+
+                <span id="close-modal-signup">X</span>
+                <div class="title">Service Provider Registration</div>
+    
+                <div id="user-type">
+                    <h2>You are offering a</h2>
+                    <div class="user-category-selection">
+                        <p id="user-type-prod" onclick="showUserCategories('product provider')">Product</p>
+                    </div>
+    
+                    <div class="user-category-selection">
+                        <p id="user-type-serv" onclick="showUserCategories('service provider')">Service</p>
+                    </div>
+                </div>
+    
+                <div id="user-category">
+                    <h2>Select an account type</h2>
+    
+                    <div class="user-category-selection">
+                        <p id="user-category-i">Individual</p>
+                    </div>
+    
+                    <div class="user-category-selection">
+                        <p id="user-category-company">Company</p>
+                    </div>
+                </div>
+    
+                <div id="signup-error" style="display: none">
+                    <object data="assets/icons/warning.svg" id="warning-logo"></object>
+                    <p style="margin: 20px" id="signup-error-message">Please fill all the fields</p>
+                </div>
+    
+                <div class="user-details" style="display: none">
+    
+                    <div class="input-box">
+                        <span class="details" id="name-field"></span>
+                        <input type="text" id="name" class="required-field" onkeyup="validate('name')" />
+                    </div>
+    
+                    <div class="input-box">
+                        <span class="details" id="id-field"></span><input type="text" id="reg-id" class="required-field" onkeyup="validate('id')" />
+                    </div>
+    
+                    <div class="input-box">
+                        <span class="details">Email Address</span>
+                        <input type="text" id="email" class="required-field" placeholder="Enter the Email Address" onkeyup="validate('email')" />
+                    </div>
+    
+                    <div class="input-box">
+                        <span class="details">Contact Number</span>
+                        <input type="number" id="number" class="required-field" placeholder="Enter the Contact Number" onkeyup="validate('number')" />
+                    </div>
+    
+                    <div class="input-box">
+                        <span class="details">Address Line 1</span>
+                        <input type="text" id="address1" class="required-field" placeholder="Enter the Address Line 1" onkeyup="validate('address1')" />
+                    </div>
+                    
+                    <div class="input-box">
+                        <span class="details">Address Line 2</span>
+                        <input type="text" id="address2" class="required-field" placeholder="Enter the Address Line 2" onkeyup="validate('address2')" />
+                    </div>
+    
+                    <div class="input-box">
+                        <span class="details">City</span>
+                        <input type="text" id="city" class="required-field" placeholder="Enter the City" onkeyup="validate('city')" />
+                    </div>
+    
+                    <div class="input-box">
+                        <span class="details">Website (If Applicable)</span><input type="text" id="website" placeholder="Enter the Website" onkeyup="validate('website')" />
+                    </div>
+    
+                    <div class="input-box">
+                        <span class="details">Password</span>
+                        <div class="password-container">
+                            <input type="password" id="password" class="required-field" placeholder="Enter a Password" onkeyup="validate('password')" />
+                            <i class="far fa-eye password-icon" id="signup-password-icon" onclick="togglePassword('password', 'signup')" aria-hidden="true"></i>
+                        </div>
+                    </div>
+    
+                    <div class="input-box">
+                        <span class="details">Confirm Password</span>
+                        <div class="password-container">
+                            <input type="password" id="password-repeat" class="required-field" placeholder="Re-enter the Password" onkeyup="validate('passwordRepeat')" />
+                            <i class="far fa-eye password-icon" id="signup-repeat-password-icon" onclick="togglePassword('password-repeat', 'signup-repeat')" aria-hidden="true"></i>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <p> By creating an account, you agree to our
+                    <a href="terms.html" id="terms" target="_blank">Terms & Conditions.</a>
+                </p>
+    
+                <div class="button">
+                    <button id="signup-btn" type="submit" style="display: none" disabled>Sign Up</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="login-modal">
+            <div class="login-container">
+                <span id="close-login">X</span>
+                <h2>Log in</h2>
+    
+                <div id="login-error">
+                    <object data="assets/icons/warning.svg" id="warning-logo"></object>
+                    <p style="margin: 20px" id="login-error-message"></p>
+                </div>
+    
+                <label for="login-email">Email</label>
+                <input type="text" placeholder="Enter Email" id="login-email"/>
+    
+                <label for="login-password">Password</label>
+                <div class="password-container">
+                    <input type="password" placeholder="Enter Password" id="login-password" />
+                    <i class="far fa-eye password-icon" id="login-password-icon" onclick='togglePassword("login-password", "login")' aria-hidden="true"></i>
+                </div>
+    
+                <div id="login-actions">
+                    <span id="forgot"><a onclick="forgotModal(1)">Forgot Password?</a></span>
+                </div>
+    
+                <div id="login-buttons">
+                    <button id="login-btn" class="account-buttons" disabled>Login</button>
+                </div>
+            </div>
+        </div>
+
+		<div id="forgot-modal" class="modal">
+			<div class="login-container">
+				<span id="close-forgot" class="modal-close">X</span>
+				<h2>Forgot Password</h2>
+				<p>We'll send you an email with instructions to reset your password.</p>
+				<label for="forgot-email">Email</label><input type="text" placeholder="Enter Email" id="forgot-email" />
+				<div id="login-buttons"><button id="forgot-btn" class="account-buttons">Reset Password</button></div>
+			</div>
+		</div>
+	</body>
+</html>

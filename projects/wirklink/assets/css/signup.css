@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+.signup-container, .edit-container{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    padding: 20px 30px;
+    font-family: "Poppins", sans-serif;
+    background-color: #fff;
+    margin:100px auto;
+    width: max-content;
+    min-width: 700px;
+    border-radius: 15px;
+}
+
+.title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+.title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+    background-color: black;
+}
+.user-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 0 50px;
+    margin: 25px;
+    -webkit-text-size-adjust: 100%;
+}
+.input-box {
+    margin-bottom: 15px;
+}
+.input-box span.details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.input-box input:hover {
+    border-color: #808080;
+}
+
+#terms {
+    color: dodgerblue;
+    cursor: pointer;
+}
+
+.button {
+    height: 45px;
+    margin: 35px auto;
+    width: 50%;
+}
+.button button {
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #103386;
+}
+.button button:hover {
+    transform: scale(1.01);
+    opacity: 0.9;
+}
+
+#loaders{
+    filter: none;
+}
+
+.success-animation, .error-animation {
+    display: none;
+    margin: 0 auto;
+    top: 25%;
+    left: 25%;
+    position: fixed;
+    min-width: 50%;
+    min-height: 50%;
+    background-color: white;
+    padding: 50px;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 15%);
+    z-index: 10;
+}
+
+.success-animation p, .error-animation p{
+    font-size: 2rem;
+    text-align: center;
+    font-family: "poppins";
+}
+
+.animation-icons{
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+#user-category, #user-type{
+    width: 100%;
+    text-align: center;
+    margin: 10% 0;
+}
+
+#user-category {
+    display: none;
+}
+
+.user-category-selection{
+    width: calc(50% - 13px);
+    background-color: #fff;
+    border: 1px solid #DDDDDD;
+    display: inline-block;
+    margin: 15% 5px;
+}
+
+.user-category-selection:hover{
+    transform: scale(1.04);
+    border-color: #808080;
+    cursor: pointer;
+}
+
+.user-category-selection p{
+    margin: 0;
+    padding: 16px;
+}
+
+#signup-error{
+    display: none;
+    align-items: center;
+    margin: 25px;
+}
+
+/* #region Success Tick */
+
+.checkmark {
+    border-radius: 50%;
+    stroke-width: 2;
+    stroke: #4bb71b;
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px #4bb71b;
+    animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
+    position: relative;
+    top: 5px;
+    right: 5px;
+}
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #4bb71b;
+    fill: #fff;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+    0%,
+    100% {
+        transform: none;
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #4bb71b;
+    }
+}
+
+/* #endregion */
+
+/* #region Error Animation */
+
+.ui-error-circle {
+    stroke-dasharray: 260.75219024795285px, 260.75219024795285px;
+    stroke-dashoffset: 260.75219024795285px;
+    animation: ani-error-circle 1.2s linear;
+}
+.ui-error-line1 {
+    stroke-dasharray: 54px 55px;
+    stroke-dashoffset: 55px;
+    stroke-linecap: round;
+    animation: ani-error-line 0.15s 1.2s linear both;
+}
+.ui-error-line2 {
+    stroke-dasharray: 54px 55px;
+    stroke-dashoffset: 55px;
+    stroke-linecap: round;
+    animation: ani-error-line 0.2s 0.9s linear both;
+}
+@keyframes ani-error-line {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes ani-error-circle {
+    0% {
+        stroke-dasharray: 0, 260.75219024795285px;
+        stroke-dashoffset: 0;
+    }
+    35% {
+        stroke-dasharray: 120px, 120px;
+        stroke-dashoffset: -120px;
+    }
+    70% {
+        stroke-dasharray: 0, 260.75219024795285px;
+        stroke-dashoffset: -260.75219024795285px;
+    }
+    100% {
+        stroke-dasharray: 260.75219024795285px, 0;
+        stroke-dashoffset: -260.75219024795285px;
+    }
+}
+
+/* #endregion */
+
+@media (max-width: 900px) {
+    .input-box {
+        margin-bottom: 15px;
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .user-details {
+        grid-template-columns: 1fr;
+    }
+
+    .loading-screen,
+    .success-animation, 
+    .error-animation {
+        width: 100vw;
+        min-height: 100vh;
+        left: 0;
+        top: 0;
+        padding: 25vh 5vw;
+    }
+
+    #error-message{
+        margin-top: 0;
+    }
+
+    .signup-container, .edit-container {
+        width: 100%;
+        min-width: 0px;
+        height: max-content;
+        margin-top: 0;
+        padding-top: 75px;
+        box-shadow: none;
+    }
+
+    .title{
+        font-size: 20px;
+    }
+}
