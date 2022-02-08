@@ -4,7 +4,7 @@ const TOKEN = localStorage.getItem("token");
 const API_URL = "https://api.wirklink.com/development/";
  
 $(document).ready(function() {
-    $("#navbar").load("projects/wirklink/assets/fragments/navbar.html", getUserDetails);
+    $("#navbar").load("/projects/wirklink/assets/fragments/navbar.html", getUserDetails);
 });
 
 // Show "Please Wait" modal while waiting for a server response
@@ -194,35 +194,35 @@ function getUserDetails(){
     activeNavbar();
 
     if(TOKEN != null){
-        $.ajax({
-            type:"GET",
-            url: API_URL + "info",
-            headers:
-            {
-                "Authorization": TOKEN
-            },
-            success:function(response) {
+        // $.ajax({
+        //     type:"GET",
+        //     url: API_URL + "info",
+        //     headers:
+        //     {
+        //         "Authorization": TOKEN
+        //     },
+        //     success:function(response) {
 
-                let name;
-                if(response.serviceProvider != null) name = response.serviceProvider.name.split(" ")[0];
-                else if(response.productProvider != null) name = response.productProvider.name.split(" ")[0];
+        //         let name;
+        //         if(response.serviceProvider != null) name = response.serviceProvider.name.split(" ")[0];
+        //         else if(response.productProvider != null) name = response.productProvider.name.split(" ")[0];
         
-                document.getElementById("navbar-user-actions").innerHTML =
-                    `<p id="user-actions-welcome">Welcome `+ name +`</p>\n
-                     <p id="navbar-dashboard">Dashboard</p>\n
-                     <p id="navbar-edit">Edit Details</p> \n
-                     <p id= "navbar-mobile-logout">Log out </p>`;
+        //         document.getElementById("navbar-user-actions").innerHTML =
+        //             `<p id="user-actions-welcome">Welcome `+ name +`</p>\n
+        //              <p id="navbar-dashboard">Dashboard</p>\n
+        //              <p id="navbar-edit">Edit Details</p> \n
+        //              <p id= "navbar-mobile-logout">Log out </p>`;
 
-                document.getElementById("navbar-account-actions").innerHTML =
-                    `<li id="navbar-username">Hi `+ name +`!</li>\n
-                    <li id="navbar-logout">Logout</li>`;
-            },
-            error:function(xhr) {
-                // If token is expired, logout
-                if(xhr.status == 401 || xhr.status == 403) logout();
-                else ERROR("An error occurred");
-            }
-        });
+        //         document.getElementById("navbar-account-actions").innerHTML =
+        //             `<li id="navbar-username">Hi `+ name +`!</li>\n
+        //             <li id="navbar-logout">Logout</li>`;
+        //     },
+        //     error:function(xhr) {
+        //         // If token is expired, logout
+        //         if(xhr.status == 401 || xhr.status == 403) logout();
+        //         else ERROR("An error occurred");
+        //     }
+        // });
     }
 }
 
