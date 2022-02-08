@@ -21,13 +21,13 @@ $(document).on({
 
 window.addEventListener("load", function() {
 
-    $("#footer").load("projects/wirklink/assets/fragments/footer.html");
-    $("#loaders").load("projects/wirklink/assets/fragments/loaders.html");
-    $("#modals").load("projects/wirklink/assets/fragments/modals.html");
+    $("#footer").load("/projects/wirklink/assets/fragments/footer.html");
+    $("#loaders").load("/projects/wirklink/assets/fragments/loaders.html");
+    $("#modals").load("/projects/wirklink/assets/fragments/modals.html");
 
     if(!navigator.cookieEnabled){
         alert("Please enable cookies");
-        window.location.href = "projects/wirklink/index.html";
+        window.location.href = "/projects/wirklink/index.html";
     }
 });
 
