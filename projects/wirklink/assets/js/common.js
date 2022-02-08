@@ -4,7 +4,7 @@ const TOKEN = localStorage.getItem("token");
 const API_URL = "https://api.wirklink.com/development/";
  
 $(document).ready(function() {
-    $("#navbar").load("../../assets/fragments/navbar.html", getUserDetails);
+    $("#navbar").load("projects/wirklink/assets/fragments/navbar.html", getUserDetails);
 });
 
 // Show "Please Wait" modal while waiting for a server response
@@ -21,13 +21,13 @@ $(document).on({
 
 window.addEventListener("load", function() {
 
-    $("#footer").load("../../assets/fragments/footer.html");
-    $("#loaders").load("../../assets/fragments/loaders.html");
-    $("#modals").load("../../assets/fragments/modals.html");
+    $("#footer").load("projects/wirklink/assets/fragments/footer.html");
+    $("#loaders").load("projects/wirklink/assets/fragments/loaders.html");
+    $("#modals").load("projects/wirklink/assets/fragments/modals.html");
 
     if(!navigator.cookieEnabled){
         alert("Please enable cookies");
-        window.location.href = "/index.html";
+        window.location.href = "projects/wirklink/index.html";
     }
 });
 
