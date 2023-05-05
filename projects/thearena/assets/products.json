@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "name": "Manchester United Home T‑Shirt",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, quaerat! Minus fuga nam obcaecati necessitatibus placeat nesciunt, dignissimos dolorem quasi! Consequatur officiis autem, nesciunt veniam sequi maiores quos eum eos?",
+        "price": 10000,
+        "frontImage": "assets/images/products/001-front.png",
+        "backImage": "assets/images/products/001-back.png",
+        "category": "tshirt",
+        "available": true
+    },
+    {
+        "id": 2,
+        "name": "Manchester United Away T‑Shirt",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, quaerat! Minus fuga nam obcaecati necessitatibus placeat nesciunt, dignissimos dolorem quasi! Consequatur officiis autem, nesciunt veniam sequi maiores quos eum eos?",
+        "price": 10000,
+        "frontImage": "assets/images/products/002-front.png",
+        "backImage": "assets/images/products/002-back.png",
+        "category": "tshirt",
+        "available": true
+    },
+    {
+        "id": 3,
+        "name": "Manchester United Home Shorts",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, quaerat! Minus fuga nam obcaecati necessitatibus placeat nesciunt, dignissimos dolorem quasi! Consequatur officiis autem, nesciunt veniam sequi maiores quos eum eos?",
+        "price": 5000,
+        "frontImage": "assets/images/products/003-front.png",
+        "backImage": "assets/images/products/003-back.png",
+        "category": "short",
+        "available": true
+    },
+
+    {
+        "id": 4,
+        "name": "Adidas Stan Smith Shoes",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, quaerat! Minus fuga nam obcaecati necessitatibus placeat nesciunt, dignissimos dolorem quasi! Consequatur officiis autem, nesciunt veniam sequi maiores quos eum eos?",
+        "price": 40000,
+        "frontImage": "assets/images/products/004-side.png",
+        "backImage": "assets/images/products/004-front.png",
+        "category": "shoe",
+        "available": true
+    },
+    {
+        "id": 5,
+        "name": "Manchester United Home Shorts",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, quaerat! Minus fuga nam obcaecati necessitatibus placeat nesciunt, dignissimos dolorem quasi! Consequatur officiis autem, nesciunt veniam sequi maiores quos eum eos?",
+        "price": 5000,
+        "frontImage": "assets/images/products/003-front.png",
+        "backImage": "assets/images/products/003-back.png",
+        "category": "short",
+        "available": false
+    },
+    {
+        "id": 6,
+        "name": "Manchester United Home T‑Shirt",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, quaerat! Minus fuga nam obcaecati necessitatibus placeat nesciunt, dignissimos dolorem quasi! Consequatur officiis autem, nesciunt veniam sequi maiores quos eum eos?",
+        "price": 10000,
+        "frontImage": "assets/images/products/001-front.png",
+        "backImage": "assets/images/products/001-back.png",
+        "category": "tshirt",
+        "available": false
+    }
+]

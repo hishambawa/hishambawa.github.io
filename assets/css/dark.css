@@ -1,0 +1,35 @@
+body.is-dark, body.is-dark .primary {
+    background-color: #041e29;
+}
+
+body.is-dark .secondary {
+    background-color: #0c343b !important;
+}
+
+body.is-dark *:not(.has-text-primary-dark) {
+    color: hsl(0, 0%, 87%) !important;
+}
+
+body.is-dark .button.is-primary:hover {
+    background-color: #0ca8ac !important;
+    color: #0c343b !important; 
+}
+
+* {
+    transition: background-color 1s;
+}
+
+*:hover:not(figcaption) {
+    transition: background-color 500ms;
+}
+
+body.is-dark .project-thumb {
+    border: none;
+}
+
+/* Make navbar menu the secondary color in mobile but not on larger screens */
+@media (max-width: 1020px) {
+    body.is-dark .navbar-menu {
+        background-color: #0c343b !important;
+    }
+}

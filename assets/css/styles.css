@@ -22,13 +22,13 @@ i.is-centered {
     }
 }
 
-a.is-primary.is-dark {
+.button.is-primary.is-dark {
     color: #00947e !important;
     border-color: #00947e !important;
     font-weight: 500;
 }
 
-a.is-primary.is-dark:hover {
+.button.is-primary.is-dark:hover {
     color: #fff !important;
     border-color: #00d1b2 !important;
 }
@@ -51,7 +51,6 @@ a.is-primary.is-dark:hover {
     background-color: #00d1b2;
     color: #fff;
 }
-
 
 figcaption {
     position: absolute;
@@ -103,4 +102,44 @@ html {
 
 .footer.is-primary {
     background-color: #40e0d0;
+}
+
+.letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+
+body, .primary {
+    background-color: hsl(0, 0%, 95%);
+}
+
+.project-thumb {
+    border: 1px solid #ddd;
+}
+
+@media (max-width: 1020px) {
+    .navbar-menu {
+        background-color: hsl(0, 0%, 95%) !important;
+    }
+}
+
+/* Wave */
+
+.wave {
+    animation-name: wave;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+}
+  
+@keyframes wave {
+    0% { transform: rotate( 0.0deg) }
+    10% { transform: rotate(14.0deg) }
+    20% { transform: rotate(-8.0deg) }
+    30% { transform: rotate(14.0deg) }
+    40% { transform: rotate(-4.0deg) }
+    50% { transform: rotate(10.0deg) }
+    60% { transform: rotate( 0.0deg) }
+    100% { transform: rotate( 0.0deg) } 
 }
