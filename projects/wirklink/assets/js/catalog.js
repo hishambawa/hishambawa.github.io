@@ -2,7 +2,7 @@ $(document).ready(function() {
     loadCategories();
 });
 
-const imgUrl = "../wirklink/assets/images/categories/";
+const imgUrl = "/projects/wirklink/assets/images/categories/";
 
 function loadCategories(){
     for(category of categories){

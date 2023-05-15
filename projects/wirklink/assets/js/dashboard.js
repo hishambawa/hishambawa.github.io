@@ -17,8 +17,8 @@ $(document).ready(function() {
             e.preventDefault();
             document.getElementById("image-" + i).value = "";
 
-            if(i == 1) document.getElementById("image-"+ i +"-preview").src = "../wirklink/assets/images/cover-image.png";
-            else document.getElementById("image-"+ i +"-preview").src = "../wirklink/assets/images/image-upload.png";
+            if(i == 1) document.getElementById("image-"+ i +"-preview").src = "/projects/wirklink/assets/images/cover-image.png";
+            else document.getElementById("image-"+ i +"-preview").src = "/projects/wirklink/assets/images/image-upload.png";
             document.getElementsByClassName("delete-image")[i-1].style.display = "none";
         }, false);
     }
@@ -40,7 +40,7 @@ $(document).ready(function() {
         document.getElementsByClassName("edit-delete")[i-1].addEventListener("click", function(e) {
             e.preventDefault();
             document.getElementById("edit-image-" + i).value = "";
-            document.getElementById("edit-image-"+ i +"-preview").src = "../wirklink/assets/images/image-upload.png";
+            document.getElementById("edit-image-"+ i +"-preview").src = "/projects/wirklink/assets/images/image-upload.png";
             document.getElementsByClassName("edit-delete")[i-1].style.display = "none";
 
             if(i == 1) coverDeleted = true;
@@ -475,7 +475,7 @@ function getDetails(id, type){
 }
 
 function loadAdDetails(id){
-    for(let i = 1; i < 4; i++) document.getElementById("edit-image-" + i + "-preview").src = "../wirklink/assets/images/image-upload.png";
+    for(let i = 1; i < 4; i++) document.getElementById("edit-image-" + i + "-preview").src = "/projects/wirklink/assets/images/image-upload.png";
 
     $.ajax({
         type:"GET",
@@ -523,7 +523,7 @@ function verifyUser(verified, reviewed){
     } 
     else if(!reviewed) {
         document.getElementById("review-modal-title").innerText = "Account under review";
-        document.getElementById("review-modal-image").src = "../wirklink/assets/images/account-review.jpg";
+        document.getElementById("review-modal-image").src = "/projects/wirklink/assets/images/account-review.jpg";
     }
 
     $("#review-modal-content").show();
